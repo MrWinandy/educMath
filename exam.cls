@@ -5,6 +5,8 @@
 \LoadClass{designBase} %a4paper; landscape
 
 \RequirePackage{lastpage}
+%\RequirePackage{etoolbox}
+\RequirePackage{totcount}
 
 \def\rattrapage{}
 
@@ -79,8 +81,8 @@
 
 
 
-
-
+\newtotcounter{totalpoints}
+\newcommand*{\totalpoints}[1]{\addtocounter{totalpoints}{#1}}
 
 
 
@@ -123,7 +125,7 @@
 %-——————oir
 
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
-\newcommand{\devoir}[3][60]{
+\newcommand{\devoir}[3][\total{totalpoints}]{
 	\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}
 	
 	\caText
@@ -193,6 +195,8 @@
 		\node(p) at (0,-0.2) {\huge $ \frac{\Huge \  }{#1} $};
 		\node[circle,draw,inner sep=0.2cm, label=](p) at (0,0) {\phantom{\huge $ \frac{\Huge \  }{#1} $}};
 		\end{tikzpicture}}\\[1.5ex]
+	
+	\totalpoints{#1}
 }
 
 \newcommand{\SLBase}[2]{
