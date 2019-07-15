@@ -100,16 +100,6 @@
 
 
 
-
-\newcommand{\chapterboxOne}[1]{
-	\def\chapIndentFactor{0.2}
-	\def\boxHeight{2cm}
-	\begin{tikzpicture}
-		\node (title) at (\chapIndentFactor\textwidth,0) {\chaptername \ \thechapter};
-		\draw (title.west) --(0,0) --++(-90:\boxHeight) --++(0:\textwidth) node[midway,above]{\Huge#1} --++(90:\boxHeight) -- (title.east);
-	\end{tikzpicture}
-}
-
 \newcommand{\chapterboxTwo}[1]{
 	\def\chapIndent{2mm}
 	\def\boxHeight{2cm}
