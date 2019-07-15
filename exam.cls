@@ -9,12 +9,14 @@
 \RequirePackage{totcount}
 
 \def\rattrapage{}
+\def\titleText{\devoirTitle}
 
 \DeclareOption{lge}{\def\logo{LGE.png}}
 \DeclareOption{ltma}{\def\logo{LTMA.png}}
 \DeclareOption{ca}{\def\caText{\ca}}
 \DeclareOption{cna}{\def\caText{\cna}}
 \DeclareOption{rattrapage}{\def\rattrapage{\\[\baselineskip] Rattrapage}}
+\DeclareOption{test}{\def\titleText{\testTitle}}
 \ProcessOptions\relax
 
 
@@ -24,6 +26,9 @@
 \newcommand{\cna}
 {\begin{center}\emph{L'usage de la calculatrice n'est pas permis!}\end{center}}
 
+\newcommand{\testTitle}{Contrôle continu }
+\newcommand{\devoirTitle}{Devoir en classe }
+
 \newcommand{\classe}[1]{
 	\def\laClasse{#1}
 }
@@ -32,6 +37,7 @@
 	\def\laSaison{#1}
 }
 
+\newcommand{\setSubtitle}[1]{\def\rattrapage{\\[\baselineskip] #1}}
 
 \newcommand{\scriptcolor}{black}
 
@@ -125,14 +131,14 @@
 %-——————oir
 
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
-\newcommand{\devoir}[3][\total{totalpoints}]{
+\newcommand{\devoir}[3][\protect\total{totalpoints}]{
 	\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}
 	
 	\caText
 	\vspace{0.5cm}
 	\begin{minipage}{0.75\textwidth}
 		\begin{center}
-			{\Huge Devoir en classe \RNum{#2}.#3 \rattrapage}
+			{\Huge \titleText \RNum{#2}.#3 \rattrapage}
 		\end{center}
 	\end{minipage}\hfill%
 	\begin{minipage}{0.23\textwidth}
@@ -187,16 +193,16 @@
 
 %Questions
 \newcounter{newtemp}
-\newcommand{\newquest}[1] % Question environnement
+\newcommand{\newquest}[2][] % Question environnement
 {\refstepcounter{newtemp}
 	\bigskip
 	{\bfseries\large Question \arabic{newtemp}} \hfill {
 		\begin{tikzpicture}[baseline=-0.1cm]
-		\node(p) at (0,-0.2) {\huge $ \frac{\Huge \  }{#1} $};
-		\node[circle,draw,inner sep=0.2cm, label=](p) at (0,0) {\phantom{\huge $ \frac{\Huge \  }{#1} $}};
+		\node(p) at (0,-0.2) {\huge $ \frac{\Huge \  }{#2^{#1}} $};
+		\node[circle,draw,inner sep=0.2cm, label=](p) at (0,0) {\phantom{\huge $ \frac{\Huge \  }{#2^{#1}} $}};
 		\end{tikzpicture}}\\[1.5ex]
 	
-	\totalpoints{#1}
+	\totalpoints{#2}
 }
 
 \newcommand{\SLBase}[2]{

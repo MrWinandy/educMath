@@ -133,15 +133,16 @@
 
 \makeatletter
 
-	\define@key{myAxis}{xmin}{\def\myxmin{#1}}
-	\define@key{myAxis}{xmax}{\def\myxmax{#1}}
-	\define@key{myAxis}{ymin}{\def\myymin{#1}}
-	\define@key{myAxis}{ymax}{\def\myymax{#1}}
-	\define@key{myAxis}{xlabel}{\def\myxlabel{#1}}
-	\define@key{myAxis}{ylabel}{\def\myylabel{#1}}
-	\define@key{myAxis}{scale}{\def\myscale{#1}}
-	
-	\setkeys{myAxis}{xmin=-10.5,ymin=-10.5,xmax=10.5,ymax=10.5,xlabel=$ x $,ylabel=$ y $,scale=0.8}
+\define@key{myAxis}{xmin}{\def\myxmin{#1}}
+\define@key{myAxis}{xmax}{\def\myxmax{#1}}
+\define@key{myAxis}{ymin}{\def\myymin{#1}}
+\define@key{myAxis}{ymax}{\def\myymax{#1}}
+\define@key{myAxis}{xlabel}{\def\myxlabel{#1}}
+\define@key{myAxis}{ylabel}{\def\myylabel{#1}}
+\define@key{myAxis}{scale}{\def\myscale{#1}}
+\define@key{myAxis}{addstyle}{\def\myaddstyle{#1}}
+
+\setkeys{myAxis}{xmin=-10.5,ymin=-10.5,xmax=10.5,ymax=10.5,xlabel=$ x $,ylabel=$ y $,scale=0.8,addstyle={}}
 
 \makeatother
 
@@ -160,13 +161,69 @@
 		xmax=\myxmax,
 		ymax=\myymax,
 		xlabel=\myxlabel,
-		ylabel=\myylabel]
+		ylabel=\myylabel,
+		\myaddstyle]
 	}{
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
 }
 
+%----------------------------------------- Statistics
+
+\pgfplotsset{
+	statisticsaxis/.style={
+		enlarge x limits=0.15,
+		enlarge y limits=0.15,
+		%every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=north west},
+		axis x line=bottom,
+		axis y line=left,
+		axis line style={-Stealth,very thick},
+		xmin=0,xmax=10.5,ymin=0,ymax=110,
+		xtick distance=1,
+%		ytick distance=5,
+		ytick={0,5,...,100},
+%		extra x ticks={0},
+		extra x tick style={grid style={black},xticklabel style={below left=-0.2em},xtick style={black}},
+		xticklabel style={font=\tiny},
+		yticklabel style={font=\tiny},
+		xlabel=$x$,
+		ylabel=$\%$,
+		grid=major,
+		grid style={thin,densely dotted,black!20}
+}}
+
+\makeatletter
+
+\define@key{statAxis}{ymax}{\def\myymax{#1}}
+\define@key{statAxis}{xmax}{\def\myxmax{#1}}
+\define@key{statAxis}{xlabel}{\def\myxlabel{#1}}
+\define@key{statAxis}{ylabel}{\def\myylabel{#1}}
+\define@key{statAxis}{scale}{\def\myscale{#1}}
+\define@key{statAxis}{addstyle}{\def\myaddstyle{#1}}
+
+\setkeys{statAxis}{xmax=10.5,ymax=110,xlabel=$ x $,ylabel=Fréquences cumulées en $ \% $,scale=0.8,addstyle={}}
+
+\makeatother
+
+\newenvironment{CFPlot}[1][]{
+	\setkeys{statAxis}{#1}
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		statisticsaxis,
+		width = \myscale\textwidth,
+		xmax=\myxmax,
+		ymax=\myymax,
+		xlabel=\myxlabel,
+		ylabel=\myylabel,
+		\myaddstyle]
+	}{
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+}
 
 %---------------------------- fractions
 
