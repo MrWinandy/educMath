@@ -1,0 +1,144 @@
+\usepackage{kpfonts}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{scrpage2}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage[explicit]{titlesec}
+\usepackage[titles]{tocloft}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mdwlist}
+\usepackage{multicol, lipsum}
+\usepackage{eurosym}
+\usepackage{ifthen}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+\usepackage{pdflscape}
+%\usepackage[thinlines]{easytable}
+%\usepackage{pst-plot}
+%\usepackage{mathtools}
+\usepackage{multirow}
+
+%---------------------Jeff
+\usepackage{textcomp}
+\usepackage{tasks}
+\usepackage{ragged2e}
+\usepackage{xargs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+
+\usetikzlibrary{arrows, shadows, positioning}
+\usetikzlibrary{external}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{fit}
+\usetikzlibrary{arrows.meta}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{gro}{rgb}{0.75,0.75,0.75}
+\def\baseColor{red}
+
+
+
+\mdfdefinestyle{envBoxBase}{
+	linecolor = \baseColor!80,
+	middlelinewidth = 2pt,
+	roundcorner=5pt,
+	backgroundcolor = \baseColor!10,
+	innertopmargin=\baselineskip,
+	innerbottommargin=\baselineskip,
+	innerleftmargin=\topskip,
+	innerrightmargin=\topskip,
+	frametitlebackgroundcolor=\baseColor!80,
+	frametitlefont=\color{white}\Large\bfseries,
+	nobreak=true
+}
+
+%\newcommand{\baseBox}[1]{
+%	\begin{mdframed}[style=envBoxBase]
+%		#1
+%	\end{mdframed}
+%}
+
+
+\newcommand{\JWAddNewTheoremStyle}[4]{
+	\mdtheorem[style=envBoxBase]{#1}{#2}
+	\newenvironment{#4}[1][]{
+		\def\baseColor{#3}
+		\begin{#1}[##1]
+		}{\end{#1}}
+}
+
+\JWAddNewTheoremStyle{definitionEnv}{Définition}{red}{defn}
+\JWAddNewTheoremStyle{stationEnv}{Station}{black}{station}
+
+\titleformat{\chapter}[display]
+{\huge\bfseries}
+{
+	\chapterboxTwo{#1}
+}
+{10pt}
+{\bfseries}{\normalfont}
+
+
+
+
+\newcommand{\chapterboxOne}[1]{
+	\def\chapIndentFactor{0.2}
+	\def\boxHeight{2cm}
+	\begin{tikzpicture}
+		\node (title) at (\chapIndentFactor\textwidth,0) {\chaptername \ \thechapter};
+		\draw (title.west) --(0,0) --++(-90:\boxHeight) --++(0:\textwidth) node[midway,above]{\Huge#1} --++(90:\boxHeight) -- (title.east);
+	\end{tikzpicture}
+}
+
+\newcommand{\chapterboxTwo}[1]{
+	\def\chapIndent{2mm}
+	\def\boxHeight{2cm}
+	\begin{tikzpicture}
+	\node (title) at (0,0) {\chaptername};
+	\draw (title.west) --++(180:\chapIndent) --++(90:\boxHeight) --++(0:\textwidth) --++(-90:\boxHeight) -- (title.east);
+	\node[anchor=south west,fill=white,inner xsep=-2mm,xshift=\chapIndent,draw] (chapternumber) at (title.south east) {\fontsize{110}{132} \selectfont \thechapter};
+	\node[anchor=west,](label) at (chapternumber.east) {\Huge#1};
+	\end{tikzpicture}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1001 @@
+%\documentclass[a4paper, 11pt, oneside, BCOR=0mm, DIV=15]{scrbook}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{scrpage2}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage[calcwidth]{titlesec}
+\usepackage[titles]{tocloft}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mdwlist}
+\usepackage{multicol, lipsum}
+\usepackage{eurosym}
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{tikz, tkz-tab}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+\usepackage{pdflscape}
+%\usepackage[thinlines]{easytable}
+%\usepackage{pst-plot}
+%\usepackage{mathtools}
+\usepackage{multirow}
+
+%---------------------Jeff
+\usepackage{tasks}
+\usepackage{ragged2e}
+\usepackage{xargs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+
+\usetikzlibrary{arrows, shadows, positioning}
+\usetikzlibrary{external}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{fit}
+\usetikzlibrary{arrows.meta}
+
+
+% Faarwen défineiren
+\def\scriptcolor{navy}
+\definecolor{webgreen}{rgb}{0, 0.5, 0} % less intense green
+\definecolor{webblue}{rgb}{0, 0, 0.5} % less intense blue
+\definecolor{webred}{rgb}{0.5, 0, 0} % less intense red                                                        
+\definecolor{lightslategray}{RGB}{119, 136, 153}
+\definecolor{darkslategray}{RGB}{47, 79, 79}
+\definecolor{steelblue}{RGB}{70, 130, 180}
+%\definecolor{midnightblue}{RGB}{25, 25, 112}
+\definecolor{darkcyan}{RGB}{0, 139, 139}
+%\definecolor{lightseagreen}{RGB}{32,  178, 170}
+%\definecolor{aqua}{RGB}{0, 255, 255}
+\definecolor{turquoise}{RGB}{0, 206, 209}
+%\definecolor{cadetblue}{RGB}{95, 158, 160}
+\definecolor{blueviolet}{RGB}{138, 43, 226}
+%\definecolor{darkviolet}{RGB}{148, 0, 211}
+\definecolor{navy}{RGB}{0, 0, 128}
+\definecolor{royalblue}{RGB}{65, 105, 225}
+\definecolor{skyblue}{RGB}{135, 206, 250}
+\definecolor{slateblue}{RGB}{106, 90, 205}
+\definecolor{darkslateblue}{RGB}{72, 61, 139}
+\definecolor{palegreen}{RGB}{152, 251, 152}
+\definecolor{limegreen}{RGB}{50, 205, 50}
+\definecolor{medseagreen}{RGB}{60, 179, 113}
+\definecolor{darkgreen}{RGB}{0, 100, 0}
+\definecolor{forestgreen}{RGB}{34, 139, 34}
+\definecolor{olivedrab}{RGB}{107, 142, 35}
+\definecolor{darkolivegreen}{RGB}{85, 107, 47}
+\definecolor{orangered}{RGB}{255, 69, 0}
+\definecolor{darkorange}{RGB}{255, 140, 0}
+\definecolor{indianred}{RGB}{255, 50, 50}
+\definecolor{darkred}{RGB}{139, 0, 0}
+\definecolor{newdarkred}{RGB}{204, 0, 0}
+\definecolor{firebrick}{RGB}{178, 34, 34}
+\definecolor{gold}{RGB}{255, 215, 0}
+\definecolor{darkgoldenrod}{RGB}{184, 134, 11}
+\definecolor{sienna}{RGB}{160, 82, 45}
+\definecolor{chocolate}{RGB}{210, 105, 30}
+\definecolor{brown}{RGB}{165, 42, 42}
+\definecolor{gro}{rgb}{0.75,0.75,0.75}
+
+\def\defcolorborder{firebrick}
+\def\defcolorfill{red}
+\def\thmcolorborder{darkgoldenrod}
+\def\thmcolorfill{gold}
+\def\propcolorborder{forestgreen}
+\def\propcolorfill{limegreen}
+
+
+\def\checkboxborder{forestgreen}
+\def\checkboxfill{limegreen}
+
+
+\def\activitycolorborder{chocolate}
+\def\activitycolorfill{brown}
+
+\def\exemplecolorborder{navy}
+\def\exemplecolorfill{webblue}
+
+
+
+\newcommand{\red}{\color{red}}
+\newcommand{\green}{\color{forestgreen}}
+\newcommand{\blue}{\color{navy}}
+\newcommand{\orange}{\color{orange}}
+\newcommand{\gro}{\color{gro}}
+
+\everymath{\displaystyle}
+%\parskip=2mm
+\parindent=0mm
+
+%---------------------- table of contents komplett iwwerschafft
+\setcounter{chapter}{0}
+\newcommand*\toccolor{%
+	\ifcase\value{chapter}%
+	navy%----- 0 -- table of contents
+	\or   navy%
+	\or   darkslateblue%---- Kapitel 1
+	\or   steelblue%------ Kapitel 2
+	\or   darkgreen%------ Kapitel 3
+	\or   darkolivegreen%------ Kapitel 4
+	\or   darkgoldenrod%---- Kapitel 5
+	\or   sienna%---- Kapitel 6
+	\or   firebrick%---- Kapitel 7
+	\else navy%-- default
+	\fi}
+
+\tocloftpagestyle{scrheadings}
+
+
+
+\makeatletter
+%% Gliederungsnummer
+\renewcommand{\numberline}[1]{%
+	\makebox[.8cm][l]{#1}\hspace{1ex}}
+
+\newcommand*\dottedtocline{\leavevmode%
+	\leaders\hbox{$\m@th
+		\mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+		mu$}\hfill\kern\z@} 
+
+
+\renewcommand{\l@chapter}[2]{%
+	\addvspace{1em}%                      vert. Abstand
+	\pagebreak[3]%                        Seitenumbruch hier erlauben
+	\noindent%                            nicht einr√ºcken
+	{\stepcounter{chapter}\color{\toccolor}\bfseries%
+		%   \Roman{chapter}%
+		%   \hspace{1ex}%
+		\rmfamily #1%
+	}%
+	\hfill%
+	{\color{\toccolor}\bfseries #2}%          Text +  Nummer
+	\par%                                 Zeilenumbruch
+	\nopagebreak%                         Seitenumbruch nicht erlauben
+	\def\scriptcolor{navy}%               Head- & Footline Faarw vum Inhaltsverzeichnis
+}
+% section
+\renewcommand{\l@section}[2]{%
+	\noindent\hspace{1cm}%                hor. Einr√ºcken (1cm)
+	\rmfamily #1\dottedtocline#2%                           Text + Nummer
+	\par%                                 Zeilenumbruch
+	\nopagebreak[2]%                      m√∂glichst kein Seitenumbruch
+}
+
+%% subsection
+\renewcommand{\l@subsection}[2]{%
+	\noindent\hspace{2cm}%                hor. Einr√ºcken (2cm)
+	\rmfamily #1\dottedtocline#2%                           Text + Nummer
+	\par%                                 Zeilenumbruch
+}
+%% subsubsection
+%\renewcommand{\l@subsubsection}[2]{%
+%  \noindent\hspace{3cm}%                hor. Einr√ºcken (3cm)
+%  \rmfamily #1\dottedtocline#2%                           Text + Nummer
+%  \par%                                 Zeilenumbruch
+%}
+\makeatother
+
+%\renewcommand*\cftchapfont{\stepcounter{chapter}\color{\toccolor}\bfseries}
+%\renewcommand*\cftchappagefont{\color{\toccolor}\bfseries}
+
+
+\newcommand{\toc}
+{\pagenumbering{roman}
+	\tableofcontents
+	\clearpage
+	\setcounter{chapter}{0}
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+}
+
+
+
+
+
+%---------------------- kleng Iwwerschreft-Format
+\newcommand{\stitle}[1]
+{\medskip
+	\noindent{\large\color{\scriptcolor}\bfseries #1}
+	\newline
+}
+
+
+
+%---------------------- grouss Iwwerschreft-Format
+\newlength\netlength
+\newcommand{\btitle}[1]
+{\netlength=\textwidth
+	\addtolength{\netlength}{-4pt}
+	\noindent
+	\begin{tikzpicture}
+	\node[left color=white, right color=\scriptcolor!50, color=\scriptcolor, rectangle, inner sep=2pt] (box)
+	{\begin{minipage}{\netlength\scshape\large}
+		#1
+		\end{minipage}
+	};
+	\end{tikzpicture}
+}
+\newcommand{\btitleinv}[1]
+{\netlength=\textwidth
+	\addtolength{\netlength}{-4pt}
+	\noindent
+	\begin{tikzpicture}
+	\node[left color=\scriptcolor!50, right color=white, color=white, rectangle, inner sep=2pt] (box)
+	{\begin{minipage}{\netlength\scshape\large}
+		#1
+		\end{minipage}
+	};
+	\end{tikzpicture}
+}
+
+
+
+%---------------------- Layout an de Rand berechnen
+\newlength{\rand}
+\setlength{\rand}{.5\paperwidth}   % En halwen huelen dat een zum Schluss
+\addtolength{\rand}{-0mm}          % BCOR-Wert!!
+\addtolength{\rand}{-.5\textwidth} % de Rand vun enger S√§it huet.
+
+
+
+%---------------------- Headline/Footline
+\setheadwidth{\textwidth}
+\setheadsepline{1pt}[\color{\scriptcolor}]
+
+\rohead{\normalfont\bfseries \ifthenelse{\equal{\chaptertitle}\empty}{\rightmark}{\chaptertitle}\ %
+	{\color{\scriptcolor}\rule[-3mm]{1pt}{7mm}}%
+	\rlap{\enskip\thepage}%
+}
+\lohead{\classe}
+%\scshape\footnotesize FISAR
+
+\chead{}
+%\scshape\footnotesize  version \the\day.\the\month.\the\year
+
+\lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
+\rehead{\classe}
+
+\setfootsepline{.5pt}[\color{\scriptcolor}]
+
+
+\def\classe{}
+\def\lycee{}
+\def\season{2018/2019}
+\def\init{fisar}
+
+%\ifoot{\small \classe}
+%\cfoot{\normalfont\small \lycee}
+%\ofoot{\small \season}
+
+\ifoot{\scshape \init}
+\cfoot{\normalfont \lycee}
+\ofoot{{(\scriptsize v.\the\day.\the\month.)} \small\season}
+
+
+\pagestyle{scrheadings}
+\renewcommand{\chapterpagestyle}{scrheadings}
+
+
+
+%---------------------- Kapitel-Iwwerschreften
+\newlength{\chapterline}
+
+\titleformat{\chapter}
+[block] % shape
+{% format
+	\LARGE\scshape\color{\toccolor}
+}
+{% label
+	\hspace{2cm}\thechapter
+}
+{% sep
+	1em}
+{% before-code
+}
+[% after-code
+\vspace{-\baselineskip}%
+\hspace{-\rand}%
+\setlength{\chapterline}{\titlewidth}%
+\addtolength{\chapterline}{\rand}%
+\raisebox{-0.1cm}
+{\begin{tikzpicture}[x=1cm, y=1cm]
+	\shade[left color = \scriptcolor] (0,0) rectangle (\chapterline,0.05);
+	\end{tikzpicture}
+}
+]
+
+\def\chaptertitle{}
+
+\let\oldchap=\chapter
+\renewcommand*{\chapter}
+{%
+	\clearpage\def\scriptcolor{\toccolor}%
+	\secdef{\Chap}{\ChapS}%
+}
+\newcommand\ChapS[1]
+{\begin{singlespace}
+		\oldchap*{#1}
+		\begin{doublespace}
+			\def\chaptertitle{#1}
+		\end{doublespace}
+	\end{singlespace}
+}
+\newcommand\Chap[2][]
+{\begin{singlespace}
+		\oldchap[#1]{#2}
+		\begin{doublespace}
+			\def\chaptertitle{#2}
+		\end{doublespace}
+	\end{singlespace}
+}
+
+%\newcommand\ChapS[1]            %Jeff: This messes up any linespreading defined by the user in the main document...
+%{\singlespacing\oldchap*{#1}\doublespacing
+%	\def\chaptertitle{#1}
+%	\setstretch{1.2}
+%}
+%\newcommand\Chap[2][]
+%{\singlespacing\oldchap[#1]{#2}\doublespacing
+%	\def\chaptertitle{#2}
+%	\setstretch{1.2}
+%}
+
+
+
+
+%---------------------- Nummereirungen am Rand
+\newcommand{\gradstyle}[1]
+{\tikzstyle{boxex}=[left color=\scriptcolor,%
+	right color=white,%
+	thick,%
+	rectangle,%
+	inner sep=2pt]%
+	\raisebox{-2pt}%
+	{\begin{tikzpicture}%
+		\node[boxex] (box)%
+		{\begin{minipage}{.95\rand\color{\scriptcolor}}%
+			\hfill #1%
+			\end{minipage}%
+		};%
+		\end{tikzpicture}%
+	}%
+}
+
+\renewcommand*{\othersectionlevelsformat}[1]
+{\llap%
+	{\gradstyle%
+		{\csname the#1\endcsname}%
+	}
+}
+
+\renewcommand*{\thechapter}{\Roman{chapter}}
+\renewcommand*{\thesection}{\arabic{section}}
+
+%\addtokomafont{part}{\LARGE\normalfont\scshape\color{\scriptcolor}}
+%\addtokomafont{chapter}{\LARGE\normalfont\scshape\color{\scriptcolor}}
+\addtokomafont{section}{\Large\bfseries\color{\scriptcolor}}
+\addtokomafont{subsection}{\large\bfseries\color{\scriptcolor}}
+\addtokomafont{subsubsection}{\large\bfseries\color{\scriptcolor}}
+
+
+
+%---------------------- Keschten fir Définitiounen
+\newcounter{defcounter}[chapter]
+
+\tikzstyle{dboxstyle} = [fill=\defcolorfill!5,
+%top color=\defcolorfill!0,
+%bottom color=\defcolorfill!30,
+draw=\defcolorfill,
+%thick,
+rounded corners,
+rectangle, inner sep=10pt, inner ysep=10pt]
+
+\newcommand{\defn}[2][]
+{\stepcounter{defcounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\bigskip\noindent
+	\begin{tikzpicture}
+	\node[dboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node[inner ysep=0pt] at (dbox.north west) [anchor=west, xshift=2mm,  fill=white, text=\defcolorfill, top color=white, bottom color=\defcolorfill!5, rounded corners]
+	{\textbf{\large Définition \arabic{defcounter}}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+\newcounter{checkboxcounter}[chapter]
+
+\tikzstyle{checkboxstyle} = [fill=\checkboxfill!5,
+%top color=\defcolorfill!0,
+%bottom color=\defcolorfill!30,
+draw=\checkboxborder,
+%thick,
+rounded corners,
+rectangle, inner sep=10pt, inner ysep=10pt]
+
+\newcommand{\addCheckpoint}[2][]
+{\stepcounter{checkboxcounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\bigskip\noindent
+	\begin{tikzpicture}
+	\node[checkboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node[inner ysep=0pt] at (dbox.north west) [anchor=west, xshift=2mm,  fill=white, text=\checkboxborder, top color=white, bottom color=\checkboxfill!5, rounded corners]
+	{\textbf{\large Checkpoint \arabic{checkboxcounter}}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+\newcounter{questioncounter}[chapter]
+
+\newcommand{\addQuestion}[2][]
+{\stepcounter{questioncounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\bigskip\noindent
+	\begin{tikzpicture}
+	\node[checkboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node[inner ysep=0pt] at (dbox.north west) [anchor=west, xshift=2mm,  fill=white, text=\checkboxborder, top color=white, bottom color=\checkboxfill!5, rounded corners]
+	{\textbf{\large Question \arabic{questioncounter}}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+
+%---------------------- Keschten fir A retenir (wichteg)
+%\newcounter{defcounter}[chapter]
+
+\tikzstyle{dboxstyle} = [fill=\defcolorfill!5,
+%top color=\defcolorfill!0,
+%bottom color=\defcolorfill!30,
+draw=\defcolorfill,
+%thick,
+rounded corners,
+rectangle, inner sep=10pt, inner ysep=10pt]
+
+\newcommand{\retenir}[2][]
+{%\stepcounter{defcounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\bigskip\noindent
+	\begin{tikzpicture}
+	\node[dboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node[inner ysep=0pt] at (dbox.north west) [anchor=west, xshift=2mm,  fill=white, text=\defcolorfill, top color=white, bottom color=\defcolorfill!5, rounded corners]
+	{\textbf{\large A retenir !}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+
+%---------------------- Késchten fir Théorèmen
+\newcounter{thmcounter}[chapter]
+
+\tikzstyle{tboxstyle} = [fill=\thmcolorfill!5,
+draw=\thmcolorborder,
+%top color=\thmcolorfill!0,
+%bottom color=\thmcolorfill!30,
+%thick,
+rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+
+\newcommand{\thm}[2][]
+{\stepcounter{thmcounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\medskip\noindent
+	\begin{tikzpicture}
+	\node[tboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node at (dbox.north west) [xshift=2mm, anchor=west, fill=white, text=\thmcolorborder, top color=white, bottom color=\thmcolorfill!5, rounded corners]
+	{\textbf{\large Théorème \arabic{thmcounter}}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+
+
+%---------------------- Késchten fir Propriété
+\newcounter{propcounter}[chapter]
+
+\tikzstyle{pboxstyle} = [fill=\propcolorfill!5,
+draw=\propcolorborder,
+%thick, 
+rounded corners,
+%top color=\propcolorfill!0,
+%bottom color=\propcolorfill!30,
+rectangle, inner sep=10pt, inner ysep=10pt]
+
+\newcommand{\prop}[2][]
+{\stepcounter{propcounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\medskip\noindent
+	\begin{tikzpicture}
+	\node[pboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node at (dbox.north west) [xshift=2mm, anchor=west, fill=white, text=\propcolorborder, top color=white, bottom color=\propcolorfill!5, rounded corners]
+	{\textbf{\large Propriété \arabic{propcounter}}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+
+%---------------------- Késchten fir Exemple
+\newcounter{exemplecounter}[chapter]
+
+\tikzstyle{eboxstyle} = [fill=\exemplecolorfill!5,
+draw=\exemplecolorborder,
+%thick, 
+rounded corners,
+%top color=\exemplecolorfill!0,
+%bottom color=\exemplecolorfill!30,
+rectangle, inner sep=10pt, inner ysep=10pt]
+
+\newcommand{\exemple}[2][]
+{\stepcounter{exemplecounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\medskip\noindent
+	\begin{tikzpicture}
+	\node[eboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node at (dbox.north west) [xshift=2mm, anchor=west, fill=white, text=\exemplecolorborder, top color=white, bottom color=\exemplecolorfill!5, rounded corners]
+	{\textbf{\large Exemple}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+%---------------------- Késchten fir activite
+\newcounter{activitycounter}[chapter]
+
+\tikzstyle{aboxstyle} = [fill=\activitycolorfill!5,
+draw=\activitycolorborder,
+%thick, 
+rounded corners,
+%top color=\activitycolorfill!0,
+%bottom color=\activitycolorfill!30,
+rectangle, inner sep=10pt, inner ysep=10pt]
+
+\newcommand{\activite}[2][]
+{\refstepcounter{activitycounter}
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	
+	\medskip\noindent
+	\begin{tikzpicture}
+	\node[aboxstyle] (dbox)
+	{\begin{minipage}{\netlength}
+		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
+		#2
+		\end{minipage}
+	};
+	\node at (dbox.north west) [xshift=2mm, anchor=west, fill=white, text=\activitycolorborder, top color=white, bottom color=\activitycolorfill!5, rounded corners]
+	{\textbf{\large Activité \arabic{activitycounter}}
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+	};
+	\end{tikzpicture}
+}
+
+
+
+%---------------------- Remarques
+\newcommand{\rem}[1]
+{ \settowidth{\netlength}{\textbf{Remarque : }}
+	\addtolength{\netlength}{-\textwidth}
+	\par\noindent
+	\textbf{\color{\scriptcolor}Remarque : }%
+	\begin{minipage}[t]{-\netlength}
+		{#1}
+	\end{minipage}\\
+}
+%%%-------------------- Exercicen définéiren
+\newcounter{exoinline}[chapter]
+\makeatletter
+\newcommand{\addexo}[2]{%
+	% Exercice an sol an array schreiwen
+	\ifx\exos\undefined
+	\def\exos{{#1}/{#2}}
+	\else
+	\if\exos0
+	\def\exos{{#1}/{#2}}
+	\else
+	\g@addto@macro\exos{,{#1}/{#2}}
+	\fi
+	\fi%
+}
+
+\newcommand{\addexoInline}[2]{%
+	% Exercice an sol an array schreiwen
+	\ifx\exos\undefined
+	\def\exos{{#1}/{#2}}
+	\else
+	\if\exos0
+	\def\exos{{#1}/{#2}}
+	\else
+	\g@addto@macro\exos{,{#1}/{#2}}
+	\fi
+	\fi
+	% Exercice direkt printen mat Iwwerschrëft asw.
+	\medskip\noindent
+	\refstepcounter{exoinline}%
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	\noindent%
+	\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}%
+	\begin{tikzpicture}
+	\node[%dotted, ultra thin, 
+	draw=\scriptcolor, rounded corners, inner sep=10pt] (exobox)
+	{\begin{minipage}{.46\netlength}
+		\tikzset{every picture/.style={rounded corners=0}}
+		\medskip \small #1
+		\end{minipage}
+	};
+	\node at (exobox.north west) [xshift=\parindent, yshift=2pt, anchor=west, fill=white, text=\scriptcolor, rounded corners]
+	{Exercice \theexoinline
+	};%
+	\end{tikzpicture}%
+	\hfill
+	\begin{tikzpicture}
+	\node[draw=\scriptcolor, rounded corners, inner sep=10pt] (exobox)
+	{\begin{minipage}{.46\netlength}
+		\tikzset{every picture/.style={rounded corners=0}}
+		\medskip \small #2
+		\end{minipage}
+	};
+	\node at (exobox.north west) [xshift=\parindent, yshift=2pt, anchor=west, fill=white, text=\scriptcolor, rounded corners]
+	{Solution \theexoinline
+	};%
+	\end{tikzpicture}% 
+}
+
+\newcommand{\addexoInlineDomicile}[2]{%
+	% Exercice an sol an array schreiwen
+	\ifx\exos\undefined
+	\def\exos{{#1}/{#2}}
+	\else
+	\if\exos0
+	\def\exos{{#1}/{#2}}
+	\else
+	\g@addto@macro\exos{,{#1}/{#2}}
+	\fi
+	\fi
+	% Exercice direkt printen mat Iwwerschrëft asw.
+	\medskip\noindent
+	\refstepcounter{exoinline}%
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	\noindent%
+	\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}%
+	\begin{tikzpicture}
+	\node[%dotted, ultra thin, 
+	draw=\scriptcolor, rounded corners, inner sep=10pt] (exobox)
+	{\begin{minipage}{.46\netlength}
+		\tikzset{every picture/.style={rounded corners=0}}
+		\medskip \small #1
+		\end{minipage}
+	};
+	\node at (exobox.north west) [xshift=\parindent, yshift=2pt, anchor=west, fill=white, text=\scriptcolor, rounded corners]
+	{Exercice \theexoinline \ \ (à domicile)
+	};%
+	\end{tikzpicture}%
+	\hfill
+	\begin{tikzpicture}
+	\node[draw=\scriptcolor, rounded corners, inner sep=10pt] (exobox)
+	{\begin{minipage}{.46\netlength}
+		\tikzset{every picture/.style={rounded corners=0}}
+		\medskip \small #2
+		\end{minipage}
+	};
+	\node at (exobox.north west) [xshift=\parindent, yshift=2pt, anchor=west, fill=white, text=\scriptcolor, rounded corners]
+	{Solution \theexoinline
+	};%
+	\end{tikzpicture}% 
+}
+
+\newcommand{\addexoInlineVertical}[2]{%
+	% Exercice an sol an array schreiwen
+	\ifx\exos\undefined
+	\def\exos{{#1}/{#2}}
+	\else
+	\if\exos0
+	\def\exos{{#1}/{#2}}
+	\else
+	\g@addto@macro\exos{,{#1}/{#2}}
+	\fi
+	\fi
+	% Exercice direkt printen mat Iwwerschrëft asw.
+	\medskip\noindent
+	\refstepcounter{exoinline}%
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	\noindent%
+	\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}%
+	{\centering
+		\begin{tikzpicture}
+		\node[%dotted, ultra thin, 
+		draw=\scriptcolor, rounded corners, inner sep=10pt] (exobox)
+		{\begin{minipage}{\netlength}
+			\tikzset{every picture/.style={rounded corners=0}}
+			\medskip \small #1
+			\end{minipage}
+		};
+		\node at (exobox.north west) [xshift=\parindent, yshift=2pt, anchor=west, fill=white, text=\scriptcolor, rounded corners]
+		{Exercice \theexoinline
+		};%
+		\end{tikzpicture}\\[0.3cm]
+		\centering
+		\begin{tikzpicture}
+		\node[draw=\scriptcolor, rounded corners, inner sep=10pt] (exobox)
+		{\begin{minipage}{\netlength}
+			\tikzset{every picture/.style={rounded corners=0}}
+			\medskip \small #2
+			\end{minipage}
+		};
+		\node at (exobox.north west) [xshift=\parindent, yshift=2pt, anchor=west, fill=white, text=\scriptcolor, rounded corners]
+		{Solution \theexoinline
+		};%
+		\end{tikzpicture}}% 
+	
+	\smallskip%
+	\setenumerate[1]{label=\arabic*.,ref=\arabic*,itemsep=1mm}%
+}
+
+
+\newcommand{\addexoInlineNoSol}[2]{%
+	% Exercice an sol an array schreiwen
+	\ifx\exos\undefined
+	\def\exos{{#1}/{#2}}
+	\else
+	\if\exos0
+	\def\exos{{#1}/{#2}}
+	\else
+	\g@addto@macro\exos{,{#1}/{#2}}
+	\fi
+	\fi
+	% Exercice direkt printen mat Iwwerschrëft asw.
+	\medskip\noindent
+	\refstepcounter{exoinline}%
+	\setlength{\netlength}{\textwidth}
+	\addtolength{\netlength}{-20pt}
+	\noindent%
+	\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}%
+	{\centering
+		\begin{tikzpicture}
+		\node[%dotted, ultra thin, 
+		draw=\scriptcolor, rounded corners, inner sep=10pt] (exobox)
+		{\begin{minipage}{\netlength}
+			\tikzset{every picture/.style={rounded corners=0}}
+			\medskip \small #1
+			\end{minipage}
+		};
+		\node at (exobox.north west) [xshift=\parindent, yshift=2pt, anchor=west, fill=white, text=\scriptcolor, rounded corners]
+		{Exercice \theexoinline
+		};%
+		\end{tikzpicture}}
+	
+	\smallskip%
+	\setenumerate[1]{label=\arabic*.,ref=\arabic*,itemsep=1mm}%
+}
+
+
+\makeatother
+
+\newcommand{\resetexos}{\def\exos{0}}
+
+%---------------------- Exercices-environment
+\newcounter{exo}[chapter]
+\tikzstyle{exosty}=[anchor=base,%
+rectangle,%
+inner sep=2pt,%
+color=white,
+bottom color=\scriptcolor,%
+top color=\scriptcolor!50,%
+minimum width=.75cm]
+
+\newcommand{\kescht}[1]{\tikz[baseline]{\node[exosty] (exo) {\bfseries\textsf{#1}};}}
+
+\newcommand{\exo}
+{\par%
+	\refstepcounter{exo}%
+	\noindent%
+	\tikz[baseline]{\node[exosty] (exo) {\bfseries\textsf{\theexo}};}
+}
+
+
+
+
+\newenvironment{exercices}[1][Exercices]
+{\phantomsection%
+	\addcontentsline{toc}{section}{Exercices}%
+	\medskip%
+	\btitle{\Large #1}%
+	\vspace{-1.75\baselineskip}%
+	\begin{multicols}{2}%
+		\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}
+		\setenumerate[2]{label=\roman*), ref=\theenumii.\roman*} 
+	}
+	{\setenumerate[1]{ label=\arabic*. , ref=\arabic*, itemsep=1mm}
+		\setenumerate[2]{label=\alph*), ref=\theenumi.\alph*}
+		\setenumerate[3]{label=\roman*), ref=\theenumii.\roman*} 
+	\end{multicols}%
+	\vspace{-.5cm}%
+	\noindent\color{\scriptcolor}\rule[0cm]{\textwidth}{1.5pt}%
+}
+
+
+
+%---------------------- Solutions-environment
+\tikzstyle{solsty}=[anchor=base,%
+rectangle,%
+inner sep=2pt,%
+color=\scriptcolor,%
+bottom color=white,%
+top color=\scriptcolor!30,%
+minimum width=.75cm]
+
+\newcommand{\sol}
+{\par%
+	\refstepcounter{sol}%
+	\noindent%
+	\tikz[baseline]{\node[solsty] (sol) {\bfseries\textsf{\thesol}};}
+}
+
+\newcounter{sol}[chapter]
+\newenvironment{solutions}[1][Solutions]
+{\phantomsection%
+	\addcontentsline{toc}{section}{Solutions}%
+	\medskip%
+	\btitleinv{\Large #1}%
+	\vspace{-1.75\baselineskip}%
+	\begin{multicols}{2}%
+		\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}
+		\setenumerate[2]{label=\roman*), ref=\theenumii.\roman*}
+	}
+	{\setenumerate[1]{ label=\arabic*. , ref=\arabic*, itemsep=1mm}
+		\setenumerate[2]{label=\alph*), ref=\theenumi.\alph*}
+		\setenumerate[3]{label=\roman*), ref=\theenumii.\roman*} 
+	\end{multicols}%
+	\vspace{-.5cm}%
+	\noindent\color{\scriptcolor}\rule[0cm]{\textwidth}{1.5pt}%
+}
+
+
+
+%---------------------- Retenons
+\newcommand{\ret}[2][]
+{\netlength=\linewidth
+	\addtolength{\netlength}{-10pt}
+	\noindent
+	\begin{tikzpicture}
+	\node[fill=gray!20, thick, rectangle, inner sep=5pt] (box)
+	{\begin{minipage}{\netlength}
+		\textbf{Retenons :}\ifthenelse{\equal{#1}\empty}{}{ (#1)} \\
+		#2
+		\end{minipage}
+	};
+	\end{tikzpicture}
+}
+
+
+
+%---------------------- p.ex. Environment
+\newenvironment{pex}
+{\settowidth{\netlength}{\textbf{p.ex.:}}
+	\addtolength{\netlength}{.25cm}
+	\\
+	\textbf{p.ex.:}%
+	\vspace{-\baselineskip}%
+	\begin{addmargin}{\netlength}%{minipage}[t]{-\netlength}
+	}
+	{\end{addmargin}%{minipage}
+	\medskip
+}
+
+
+%---------------------- exemple-type
+\newlength{\leftbarwidth}
+\setlength{\leftbarwidth}{.25cm}
+\newlength{\leftbarsep}
+\setlength{\leftbarsep}{.25cm}
+
+
+\newcommand*{\leftbarcolorcmd}{\color{\scriptcolor}}% as a command to be more flexible
+\colorlet{leftbarcolor}{black}
+
+\renewenvironment{leftbar}{%
+	\def\FrameCommand{{\leftbarcolorcmd{\vrule width \leftbarwidth\relax\hspace {\leftbarsep}}}}%
+	\MakeFramed {\advance \hsize -\width \FrameRestore }%
+}{%
+	\endMakeFramed
+}
+
+\newenvironment{extype}[1][exemple-type :]
+{\vspace{-.5\baselineskip}%
+	\begin{leftbar}%
+		\vspace{-.25\baselineskip}%
+		\stitle{#1}%
+		\noindent
+	}
+	{\end{leftbar}%
+	\vspace{-.5\baselineskip}\noindent}%
+
+
+
+%---------------------- Nummeréirung nom System 1.a)
+\setenumerate[1]{ label=\arabic*. , ref=\arabic*, itemsep=1mm}
+\setenumerate[2]{label=\alph*), ref=\theenumi.\alph*}
+\setenumerate[3]{label=\roman*), ref=\theenumii.\roman*} 
+
+
+
+
+
+
+%---------------------- Jeff
+
+\setitemize[1]{label=\textasteriskcentered)}
+
+
+%---------------------- Highlighting
+
+\def\highlightcolor{steelblue}
+\newcommand{\highlight}[1]{{\color{\highlightcolor} #1}} %highlight in chapters color
