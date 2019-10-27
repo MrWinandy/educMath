@@ -196,12 +196,12 @@
 
 \makeatletter
 
-\define@key{statAxis}{ymax}{\def\myymax{#1}}
-\define@key{statAxis}{xmax}{\def\myxmax{#1}}
-\define@key{statAxis}{xlabel}{\def\myxlabel{#1}}
-\define@key{statAxis}{ylabel}{\def\myylabel{#1}}
-\define@key{statAxis}{scale}{\def\myscale{#1}}
-\define@key{statAxis}{addstyle}{\def\myaddstyle{#1}}
+\define@key{statAxis}{ymax}{\def\myStatymax{#1}}
+\define@key{statAxis}{xmax}{\def\myStatxmax{#1}}
+\define@key{statAxis}{xlabel}{\def\myStatxlabel{#1}}
+\define@key{statAxis}{ylabel}{\def\myStatylabel{#1}}
+\define@key{statAxis}{scale}{\def\myStatscale{#1}}
+\define@key{statAxis}{addstyle}{\def\myStataddstyle{#1}}
 
 \setkeys{statAxis}{xmax=10.5,ymax=110,xlabel=$ x $,ylabel=Fréquences cumulées en $ \% $,scale=0.8,addstyle={}}
 
@@ -213,12 +213,12 @@
 		\begin{tikzpicture}
 		\begin{axis}[
 		statisticsaxis,
-		width = \myscale\textwidth,
-		xmax=\myxmax,
-		ymax=\myymax,
-		xlabel=\myxlabel,
-		ylabel=\myylabel,
-		\myaddstyle]
+		width = \myStatscale\textwidth,
+		xmax=\myStatxmax,
+		ymax=\myStatymax,
+		xlabel=\myStatxlabel,
+		ylabel=\myStatylabel,
+		\myStataddstyle]
 	}{
 		\end{axis}
 		\end{tikzpicture}

@@ -16,6 +16,7 @@
 \DeclareOption{ca}{\def\caText{\ca}}
 \DeclareOption{cna}{\def\caText{\cna}}
 \DeclareOption{rattrapage}{\def\rattrapage{\\[\baselineskip] Rattrapage}}
+\DeclareOption{supplement}{\def\rattrapage{\\[\baselineskip] Supplément}}
 \DeclareOption{test}{\def\titleText{\testTitle}}
 \ProcessOptions\relax
 
@@ -40,21 +41,22 @@
 \newcommand{\setSubtitle}[1]{\def\rattrapage{\\[\baselineskip] #1}}
 
 \newcommand{\scriptcolor}{black}
+\setlength\parindent{0pt}
 
 
 \newcommand{\compTableau}{
 	\begin{center}
 		\setstretch{1}\setlength{\extrarowheight}{5pt}
 		\footnotesize
-		\begin{tabular}{|p{4.5cm}|*{5}{>{\centering\arraybackslash}m{1.9cm}|}}
+		\begin{tabular}{|p{4.5cm}|*{6}{>{\centering\arraybackslash}m{1.9cm}|}}
 			\hline
-			\textbf{Compétence} & \textbf{insuffisant}  & \textbf{satisfaisant}  &  \textbf{bien} & \textbf{très bien} \\ \hline \hline
-			\textbf{Nombres et opérations / dépendance et variation} & & & &  \\  \hline
-			\textbf{Figures du plan\newline et de l'espace} &  & & &  \\  \hline
+			\textbf{Compétence} & \textbf{non évalué} & \textbf{insuffisant}  & \textbf{satisfaisant}  &  \textbf{bien} & \textbf{très bien} \\ \hline \hline
+			\textbf{Nombres et opérations / dépendance et variation} & & & & &  \\  \hline
+			\textbf{Figures du plan\newline et de l'espace} & &  & & &  \\  \hline
 			%\textbf{Données} & & & & &  \\  &  & & & \\  \hline
 			%\textbf{Processus aléatoires} &&&&\\  &  &  & & \\  \hline
-			\textbf{Résolution de problèmes / modéliser} & & & & \\  \hline
-			\textbf{Argumenter / \newline communiquer} &&&&\\  \hline
+			\textbf{Résolution de problèmes / modéliser} & & & & & \\  \hline
+			\textbf{Argumenter / \newline communiquer} & &&&&\\  \hline
 		\end{tabular}
 	\end{center}
 }
@@ -63,15 +65,15 @@
 	\begin{center}
 		\setstretch{1}\setlength{\extrarowheight}{5pt}
 		\footnotesize
-		\begin{tabular}{|p{4.5cm}|*{5}{>{\centering\arraybackslash}m{1.9cm}|}}
+		\begin{tabular}{|p{4.5cm}|*{6}{>{\centering\arraybackslash}m{1.9cm}|}}
 			\hline
-			\textbf{Compétence} & \textbf{insuffisant}  & \textbf{satisfaisant}  &  \textbf{bien} & \textbf{très bien} \\ \hline \hline
-			\textbf{Nombres et opérations / dépendance et variation} & & & &  \\  \hline
-			\textbf{Figures du plan\newline et de l'espace} &  & & &  \\  \hline
+			\textbf{Compétence} & \textbf{non évalué} & \textbf{insuffisant}  & \textbf{satisfaisant}  &  \textbf{bien} & \textbf{très bien} \\ \hline \hline
+			\textbf{Nombres et opérations / dépendance et variation} & & & & &  \\  \hline
+			\textbf{Figures du plan\newline et de l'espace} & &  & & &  \\  \hline
 			%\textbf{Données} & & & & &  \\  &  & & & \\  \hline
 			%\textbf{Processus aléatoires} &&&&\\  &  &  & & \\  \hline
-			\textbf{Résolution de problèmes / modéliser} & & & & \\  \hline
-			\textbf{Argumenter / \newline communiquer} &&&&\\  \hline
+			\textbf{Résolution de problèmes / modéliser} & & & & & \\  \hline
+			\textbf{Argumenter / \newline communiquer} & &&&&\\  \hline
 		\end{tabular}
 	\end{center}
 }
