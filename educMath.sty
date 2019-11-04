@@ -53,9 +53,11 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
-\newcommand{\D}{\mathbb{D}}
+%\newcommand{\D}{\mathbb{D}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
+
+\def\D{\mathbb{D}}
 
 
 % Haisecher wéi am Heft 
@@ -297,8 +299,130 @@
 }
 
 
+%pyramide exercises
+\newcommand{\pyramideBox}[2]{
+	\draw #1 rectangle #2;
+}
+
+\newcommand{\mathresult}[1]{\pgfmathparse{#1}\pgfmathsetmacro\mymathresult{\pgfmathresult}}
+
+\newcommand{\nth}[2]{
+	\foreach \x [count=\k] in #1 {
+		\ifnum\k=#2
+		\x
+		\fi
+	}
+}
+
+\newcounter{itemcounter}
+\newcommand{\pyramide}[3][+]{
+	\begin{tikzpicture}
+		\setcounter{itemcounter}{1}
+		\foreach \myrow in {1,...,#2}{
+			\foreach \mycol in {1,...,\myrow}{
+				\edef\counter{\arabic{itemcounter}}
+				
+				\mathresult{-0.5*\myrow+\mycol-1}
+				\edef\lowerleftx{\mymathresult}
+				
+				\mathresult{-0.5*\myrow}\mymathresult
+				\edef\lowerlefty{\mymathresult}
+				
+				\mathresult{-0.5*\myrow+\mycol}\mymathresult
+				\edef\upperrightx{\mymathresult}
+				
+				\mathresult{-0.5*\myrow+0.5}\mymathresult
+				\edef\upperrighty{\mymathresult}
+				
+				
+				\edef\lowerleft{(\lowerleftx,\lowerlefty)}
+				\edef\upperright{(\upperrightx,\upperrighty)}
+				\pyramideBox{\lowerleft}{\upperright}
+				
+				\node[xshift=0.5cm,yshift=0.25cm] at (\lowerleftx,\lowerlefty){\nth{{#3}}{\counter}};
+				
+				\stepcounter{itemcounter}
+			}
+		}
+	
+		\begin{scope}[scale=0.9,xshift=-0.5cm]
+			\draw (2,0) rectangle (3,0.5);
+			\draw (3,0) rectangle (4,0.5);
+			\draw (2.5,0.5) rectangle (3.5,1);
+			\node at (2.5,0.25){$ a $};
+			\node at (3.5,0.25){$ b $};
+			\node at (3,0.75){$ a #1 b $};
+		\end{scope}
+	\end{tikzpicture}
+}
 
 
+
+%Balance for visualizing equations
+\newcommand{\equationBalance}[2]{
+	
+	\begin{tikzpicture}[
+	rounded corners=0,
+	joint/.style = { inner sep=0, minimum size=0.1mm,fill=black,draw,circle},
+	arg/.style = { inner sep=0,rectangle}
+	]
+	\node[joint] (base) at (0,0) {};
+	\node[joint,below left= 0.8 of base] (base1) {};
+	\node[joint,below right= 0.8 of base] (base2) {};
+	\draw[fill=black!20] (base.center) -- (base1.center) -- (base2.center) -- cycle;
+	
+	\node[joint,left= 1.5 of base.north] (leftJoint) {};
+	\node[joint,right= 1.5 of base.north] (rightJoint) {};
+	\draw (leftJoint) -- (rightJoint);
+	
+	%right side
+	\node[joint,above left= 0.8 of leftJoint](leftBase) {};
+	\draw (leftBase) -- (leftJoint);
+	
+	\node[joint,left= 0.8 of leftBase] (leftBaseLeftJoint) {};
+	\node[joint,right= 0.8 of leftBase] (leftBaseRightJoint) {};
+	\draw (leftBaseLeftJoint) -- (leftBaseRightJoint);
+	
+	\node[joint,above left= 0.5 of leftBaseLeftJoint] (leftBaseLeftArm) {};
+	\draw (leftBaseLeftJoint) -- (leftBaseLeftArm);
+	\node[joint,above right= 0.5 of leftBaseRightJoint] (leftBaseRightArm) {};
+	\draw (leftBaseRightJoint) -- (leftBaseRightArm);
+	
+	%left side
+	\node[joint,above right= 0.8 of rightJoint](rightBase) {};
+	\draw (rightBase) -- (rightJoint);
+	
+	\node[joint,left= 0.8 of rightBase] (rightBaseLeftJoint) {};
+	\node[joint,right= 0.8 of rightBase] (rightBaseRightJoint) {};
+	\draw (rightBaseLeftJoint) -- (rightBaseRightJoint);
+	
+	\node[joint,above left= 0.5 of rightBaseLeftJoint] (rightBaseLeftArm) {};
+	\draw (rightBaseLeftJoint) -- (rightBaseLeftArm);
+	\node[joint,above right= 0.5 of rightBaseRightJoint] (rightBaseRightArm) {};
+	\draw (rightBaseRightJoint) -- (rightBaseRightArm);
+	
+	
+	\newsavebox\leftbox
+	
+	\begin{lrbox}{\leftbox}
+	#1
+	\end{lrbox}
+	
+	\newsavebox\rightbox
+	
+	\begin{lrbox}{\rightbox}
+	#2
+	\end{lrbox}
+	
+	\node[above=0mm of leftBase,arg](leftArg) {\usebox\leftbox};
+	\node[above=0mm of rightBase,arg](rightArg) {\usebox\rightbox};
+	
+	\global\let\leftbox\relax
+	\global\let\rightbox\relax
+	
+	\end{tikzpicture}
+	
+}
 
 
 
