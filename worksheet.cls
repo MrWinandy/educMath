@@ -4,5 +4,7 @@
 
 \LoadClass[a4paper, 11pt, oneside, BCOR=0mm, DIV=15]{designBase} %a4paper; landscape
 
+\usepackage{educMath}
+\input{design_worksheet}
 
 

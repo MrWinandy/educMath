@@ -434,7 +434,7 @@ draw=\checkboxborder,
 rounded corners,
 rectangle, inner sep=10pt, inner ysep=10pt]
 
-\newcommand{\addCheckpoint}[2][]
+\newcommand{\addCheckpoint}[3][]
 {\stepcounter{checkboxcounter}
 	\setlength{\netlength}{\textwidth}
 	\addtolength{\netlength}{-20pt}
@@ -444,12 +444,16 @@ rectangle, inner sep=10pt, inner ysep=10pt]
 	\node[checkboxstyle] (dbox)
 	{\begin{minipage}{\netlength}
 		\ifthenelse{\equal{#1}{\empty}}{\smallskip}{\medskip}
-		#2
+		#3
 		\end{minipage}
 	};
 	\node[inner ysep=0pt] at (dbox.north west) [anchor=west, xshift=2mm,  fill=white, text=\checkboxborder, top color=white, bottom color=\checkboxfill!5, rounded corners]
 	{\textbf{\large Checkpoint \arabic{checkboxcounter}}
-		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}
+		\large(#2)
+	};
+	\node[inner ysep=0pt, inner xsep=0pt] at (dbox.south east) [anchor=east, xshift=-2mm,  fill=white, text=\checkboxborder, bottom color=white, top color=\checkboxfill!5, rounded corners]
+	{\textbf{
+		\ifthenelse{\equal{#1}{\empty}}{}{{\large(#1)}}}
 	};
 	\end{tikzpicture}
 }
