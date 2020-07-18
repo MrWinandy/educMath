@@ -1,11 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.14)  16 AUG 2019 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.25)  18 JUL 2020 09:45
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **designBase.tex
 (./designBase.tex
-LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+LaTeX2e <2018-12-01>
 
 ! LaTeX Error: \usepackage before \documentclass.
 
@@ -640,9 +639,21 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 45--51
 []
  []
 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \usepackage{
+                 JWColors}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
 ! Undefined control sequence.
-l.58 \definecolor
-                 {webgreen}{rgb}{0, 0.5, 0} % less intense green
+l.60 \mdfdefinestyle
+                    {envBoxBase}{
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -656,1013 +667,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 \definecolor{w
-                   ebgreen}{rgb}{0, 0.5, 0} % less intense green
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no w in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.59 \definecolor
-                 {webblue}{rgb}{0, 0, 0.5} % less intense blue
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no w in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Undefined control sequence.
-l.60 \definecolor
-                 {webred}{rgb}{0.5, 0, 0} % less intense red
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no w in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.61 \definecolor
-                 {lightslategray}{RGB}{119, 136, 153}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-! Undefined control sequence.
-l.62 \definecolor
-                 {darkslategray}{RGB}{47, 79, 79}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-! Undefined control sequence.
-l.63 \definecolor
-                 {steelblue}{RGB}{70, 130, 180}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.65 \definecolor
-                 {darkcyan}{RGB}{0, 139, 139}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-! Undefined control sequence.
-l.68 \definecolor
-                 {turquoise}{RGB}{0, 206, 209}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no q in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-! Undefined control sequence.
-l.70 \definecolor
-                 {blueviolet}{RGB}{138, 43, 226}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-! Undefined control sequence.
-l.72 \definecolor
-                 {navy}{RGB}{0, 0, 128}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-! Undefined control sequence.
-l.73 \definecolor
-                 {royalblue}{RGB}{65, 105, 225}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Undefined control sequence.
-l.74 \definecolor
-                 {skyblue}{RGB}{135, 206, 250}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no s in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.75 \definecolor
-                 {slateblue}{RGB}{106, 90, 205}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Undefined control sequence.
-l.76 \definecolor
-                 {darkslateblue}{RGB}{72, 61, 139}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-! Undefined control sequence.
-l.77 \definecolor
-                 {palegreen}{RGB}{152, 251, 152}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-! Undefined control sequence.
-l.78 \definecolor
-                 {limegreen}{RGB}{50, 205, 50}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.79 \definecolor
-                 {medseagreen}{RGB}{60, 179, 113}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-! Undefined control sequence.
-l.80 \definecolor
-                 {darkgreen}{RGB}{0, 100, 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.81 \definecolor
-                 {forestgreen}{RGB}{34, 139, 34}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-! Undefined control sequence.
-l.82 \definecolor
-                 {olivedrab}{RGB}{107, 142, 35}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Undefined control sequence.
-l.83 \definecolor
-                 {darkolivegreen}{RGB}{85, 107, 47}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-! Undefined control sequence.
-l.84 \definecolor
-                 {orangered}{RGB}{255, 69, 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.85 \definecolor
-                 {darkorange}{RGB}{255, 140, 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.86 \definecolor
-                 {indianred}{RGB}{255, 50, 50}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.87 \definecolor
-                 {darkred}{RGB}{139, 0, 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.88 \definecolor
-                 {newdarkred}{RGB}{204, 0, 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.89 \definecolor
-                 {firebrick}{RGB}{178, 34, 34}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-! Undefined control sequence.
-l.90 \definecolor
-                 {gold}{RGB}{255, 215, 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no g in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.91 \definecolor
-                 {darkgoldenrod}{RGB}{184, 134, 11}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-! Undefined control sequence.
-l.92 \definecolor
-                 {sienna}{RGB}{160, 82, 45}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Undefined control sequence.
-l.93 \definecolor
-                 {chocolate}{RGB}{210, 105, 30}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no c in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.94 \definecolor
-                 {brown}{RGB}{165, 42, 42}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no b in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-! Undefined control sequence.
-l.95 \definecolor
-                 {gro}{rgb}{0.75,0.75,0.75}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 58--97
-[]
- []
-
-! Undefined control sequence.
-l.100 \mdfdefinestyle
-                     {envBoxBase}{
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 \mdfdefinestyle{e
-                       nvBoxBase}{
+l.60 \mdfdefinestyle{e
+                      nvBoxBase}{
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1686,9 +692,15 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.61 	linecolor = \baseColor
+                            !80,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 8 in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -1745,9 +757,15 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.64 	backgroundcolor = \baseColor
+                                  !5,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -1878,8 +896,8 @@ Missing character: There is no = in font nullfont!
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    f
-l.111 	f
-        rametitlebackgroundcolor=\baseColor!80,
+l.71 	f
+       rametitlebackgroundcolor=\baseColor!80,
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1913,9 +931,15 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.71 	frametitlebackgroundcolor=\baseColor
+                                          !80,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 8 in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -1936,8 +960,8 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.112 	frametitlefont=\color
-                            {white}\Large\bfseries,
+l.72 	frametitlefont=\color
+                           {white}\Large\bfseries,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1950,8 +974,8 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.112 	frametitlefont=\color{white}\Large
-                                         \bfseries,
+l.72 	frametitlefont=\color{white}\Large
+                                        \bfseries,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1959,28 +983,28 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 100--115
+Overfull \hbox (20.0pt too wide) in paragraph at lines 60--75
 []
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 100--115
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 60--75
 \OT1/cmr/bx/n/10 ,
  []
 
 
-Overfull \hbox (15.97214pt too wide) in paragraph at lines 100--115
+Overfull \hbox (15.97214pt too wide) in paragraph at lines 60--75
 \OT1/cmr/bx/n/10 no-
  []
 
 
-Overfull \hbox (57.86777pt too wide) in paragraph at lines 100--115
+Overfull \hbox (57.86777pt too wide) in paragraph at lines 60--75
 \OT1/cmr/bx/n/10 break=true
  []
 
 ! Undefined control sequence.
-l.117 \tikzset
-              {
+l.77 \tikzset
+             {
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1994,8 +1018,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.118 	w
-        arningsymbol/.style={
+l.78 	w
+       arningsymbol/.style={
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2035,9 +1059,15 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.80 		draw=\baseColor
+                      ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no , in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2066,13 +1096,13 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 118--125
+Overfull \hbox (20.0pt too wide) in paragraph at lines 78--85
 []
  []
 
 ! Undefined control sequence.
-l.126 \mdfdefinestyle
-                     {algoBox}{
+l.86 \mdfdefinestyle
+                    {algoBox}{
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2086,8 +1116,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 \mdfdefinestyle{a
-                       lgoBox}{
+l.86 \mdfdefinestyle{a
+                      lgoBox}{
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2108,9 +1138,15 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.87 	linecolor = \baseColor
+                            !80,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 8 in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -2161,9 +1197,15 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.90 	backgroundcolor = \baseColor
+                                  !5,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -2294,8 +1336,8 @@ Missing character: There is no = in font nullfont!
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    t
-l.137 	to
-         pline=false,%
+l.97 	to
+        pline=false,%
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -2376,9 +1418,15 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.100 	frametitlebackgroundcolor=\baseColor
+                                           !80,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 8 in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -2399,7 +1447,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.141 	frametitlefont=\color
+l.101 	frametitlefont=\color
                             {white}\Large\bfseries,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2413,7 +1461,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.141 	frametitlefont=\color{white}\Large
+l.101 	frametitlefont=\color{white}\Large
                                          \bfseries,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2422,29 +1470,29 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 126--146
+Overfull \hbox (20.0pt too wide) in paragraph at lines 86--106
 []
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 126--146
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 86--106
 \OT1/cmr/bx/n/10 ,
  []
 
 
-Overfull \hbox (15.97214pt too wide) in paragraph at lines 126--146
+Overfull \hbox (15.97214pt too wide) in paragraph at lines 86--106
 \OT1/cmr/bx/n/10 no-
  []
 
 
-Overfull \hbox (61.0622pt too wide) in paragraph at lines 126--146
+Overfull \hbox (61.0622pt too wide) in paragraph at lines 86--106
 \OT1/cmr/bx/n/10 break=true,
  []
 
 ! Undefined control sequence.
 \JWAddNewTheoremStyle #1#2#3#4#5-> \mdtheorem 
                                               [style=#5]{#1}{#2} \newenviron...
-l.156 ...nEnv}{Définition}{red}{defn}{envBoxBase}
+l.116 ...Définition}{indianred}{defn}{envBoxBase}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2459,7 +1507,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.156 ...nEnv}{Définition}{red}{defn}{envBoxBase}
+l.116 ...Définition}{indianred}{defn}{envBoxBase}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2496,16 +1544,16 @@ Missing character: There is no E in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no D in font nullfont!
-LaTeX Font Info:    Try loading font information for +cmr on input line 156.
-LaTeX Font Info:    No file cmr.fd. on input line 156.
+LaTeX Font Info:    Try loading font information for +cmr on input line 116.
+LaTeX Font Info:    No file cmr.fd. on input line 116.
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `/cmr/m/n' instead on input line 156.
+(Font)              using `/cmr/m/n' instead on input line 116.
 
 ! Corrupted NFSS tables.
 wrong@fontshape ...message {Corrupted NFSS tables}
                                                   error@fontshape else let f...
-l.156 ...nEnv}{Définition}{red}{defn}{envBoxBase}
+l.116 ...Définition}{indianred}{defn}{envBoxBase}
                                                   
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -2514,7 +1562,7 @@ and deduce the truth by order and method.
 
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 156.
+(Font)              using `OT1/cmr/m/n' instead on input line 116.
 
 Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2527,7 +1575,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 \JWAddNewTheoremStyle #1#2#3#4#5-> \mdtheorem 
                                               [style=#5]{#1}{#2} \newenviron...
-l.157 ...Env}{Station}{black}{station}{envBoxBase}
+l.117 ...Env}{Station}{black}{station}{envBoxBase}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2573,7 +1621,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 \JWAddNewTheoremStyle #1#2#3#4#5-> \mdtheorem 
                                               [style=#5]{#1}{#2} \newenviron...
-l.158 ...}{Activité}{brown}{activite}{envBoxBase}
+l.118 ...tivité}{chocolate}{activite}{envBoxBase}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2620,7 +1668,7 @@ Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
 \JWAddNewTheoremStyle #1#2#3#4#5-> \mdtheorem 
                                               [style=#5]{#1}{#2} \newenviron...
-l.159 ...{Propriété}{webgreen}{prop}{envBoxBase}
+l.119 ...opriété}{forestgreen}{prop}{envBoxBase}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2663,7 +1711,7 @@ Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
 \JWAddNewTheoremStyle #1#2#3#4#5-> \mdtheorem 
                                               [style=#5]{#1}{#2} \newenviron...
-l.160 ...typeEnv}{Algorithme}{blue}{algo}{algoBox}
+l.120 ...typeEnv}{Algorithme}{blue}{algo}{algoBox}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2706,22 +1754,22 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (29.44446pt too wide) in paragraph at lines 156--161
+Overfull \hbox (29.44446pt too wide) in paragraph at lines 116--121
 []\/cmr/m/n/10 ^^Se
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 156--161
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 116--121
 \/cmr/m/n/10 ^^Se
  []
 
 
-Overfull \hbox (8.88889pt too wide) in paragraph at lines 156--161
+Overfull \hbox (8.88889pt too wide) in paragraph at lines 116--121
 \/cmr/m/n/10 ^^Se^^Se
  []
 
 ! Undefined control sequence.
-l.163 \titlespacing
+l.123 \titlespacing
                    {\chapter}{0cm}{0cm}{0cm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2730,7 +1778,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.163 \titlespacing{\chapter
+l.123 \titlespacing{\chapter
                             }{0cm}{0cm}{0cm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2745,7 +1793,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.163 \titlespacing{\chapter}{0
+l.123 \titlespacing{\chapter}{0
                                cm}{0cm}{0cm}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2760,7 +1808,7 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
-l.164 \titleformat
+l.124 \titleformat
                   {\chapter}[display]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2769,7 +1817,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.164 \titleformat{\chapter
+l.124 \titleformat{\chapter
                            }[display]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2787,7 +1835,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.165 {\huge
+l.125 {\huge
             \bfseries}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2796,7 +1844,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.167 	\chapterbox
+l.127 	\chapterbox
                   {#1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2805,7 +1853,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! You can't use `macro parameter character #' in horizontal mode.
-l.167 	\chapterbox{#
+l.127 	\chapterbox{#
                     1}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2818,12 +1866,12 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 163--171
+Overfull \hbox (20.0pt too wide) in paragraph at lines 123--131
 []
  []
 
 ! Undefined control sequence.
-l.172 \titleformat
+l.132 \titleformat
                   {\section}[display]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2832,7 +1880,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.172 \titleformat{\section
+l.132 \titleformat{\section
                            }[display]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2847,7 +1895,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.172 \titleformat{\section}[
+l.132 \titleformat{\section}[
                              display]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2862,7 +1910,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.173 {\huge
+l.133 {\huge
             \bfseries}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2871,7 +1919,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.175 	\sectionbox
+l.135 	\sectionbox
                   {#1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2880,7 +1928,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! You can't use `macro parameter character #' in horizontal mode.
-l.175 	\sectionbox{#
+l.135 	\sectionbox{#
                     1}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2893,12 +1941,12 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 172--179
+Overfull \hbox (20.0pt too wide) in paragraph at lines 132--139
 []
  []
 
 ! Undefined control sequence.
-l.194 \pgfdeclarelayer
+l.154 \pgfdeclarelayer
                       {bg}    % declare background layer
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2913,7 +1961,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.194 \pgfdeclarelayer{b
+l.154 \pgfdeclarelayer{b
                         g}    % declare background layer
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2921,7 +1969,7 @@ If that doesn't work, type  X <return>  to quit.
 Missing character: There is no b in font nullfont!
 Missing character: There is no g in font nullfont!
 ! Undefined control sequence.
-l.195 \pgfsetlayers
+l.155 \pgfsetlayers
                    {bg,main}  % set the order of the layers (main is the sta...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2937,7 +1985,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 194--206
+Overfull \hbox (20.0pt too wide) in paragraph at lines 154--166
 []
  []
 
@@ -2949,10 +1997,10 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 194--206
 
  
 Here is how much of TeX's memory you used:
- 46 strings out of 492649
- 458 string characters out of 6129622
- 56699 words of memory out of 5000000
- 4027 multiletter control sequences out of 15000+600000
+ 45 strings out of 492616
+ 447 string characters out of 6129481
+ 57613 words of memory out of 5000000
+ 4063 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  18i,1n,21p,186b,91s stack positions out of 5000i,500n,10000p,200000b,80000s

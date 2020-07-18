@@ -1,108 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{educMath}[2018/09/25 Education Math Package]
 
-\RequirePackage{amsmath}
-\RequirePackage{amssymb}
-\RequirePackage{amsfonts}
-\RequirePackage{eurosym}
-\RequirePackage{calrsfs}
-\RequirePackage{tasks}
-\settasks{before-skip=\medskipamount,after-skip=\medskipamount}
-\RequirePackage{multicol}
-\RequirePackage{xargs}
-\RequirePackage{keyval}
-\RequirePackage{pgfplots}
-\pgfplotsset{compat=1.11}
-\RequirePackage{tkz-euclide}
-\usetkzobj{all}
+\RequirePackage{JWImports}
+\RequirePackage{JWColors}
 
-\RequirePackage{systeme}
-
-\RequirePackage{icomma}
-\RequirePackage{siunitx}
-\sisetup{
-	add-decimal-zero = true , % default setting, not needed
-	output-decimal-marker = {,} ,
-	group-separator = \, % default setting, not needed
-}
-
-\RequirePackage{tikz}
-\usetikzlibrary{arrows, shadows, positioning}
-\usetikzlibrary{external}
-\usetikzlibrary{calc}
-\usetikzlibrary{shapes.geometric}
-\usetikzlibrary{fit}
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{intersections}
-
-\definecolor{gro}{rgb}{0.75,0.75,0.75}
-
-\newcommand{\lk}{\left(}
-\newcommand{\rk}{\right)}
-
-\providecommand{\degre}{{\ensuremath ^\circ}}
-\renewcommand{\degre}{{\ensuremath ^\circ}}
-
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\Div}{div}
-\DeclareMathOperator{\PGCD}{PGCD}
-\DeclareMathOperator{\PPCM}{PPCM}
-
-\DeclareMathOperator{\h}{h}
-
-%Ensembles
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Q}{\mathbb{Q}}
-%\newcommand{\D}{\mathbb{D}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\N}{\mathbb{N}}
-
-\def\D{\mathbb{D}}
-
-
-% Haisecher wéi am Heft 
-\newcommand{\heft}[2]
-{\noindent
-	\begin{tikzpicture}[scale=1.05, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-	\draw [color=gro,dash pattern=on 1pt off 1pt, xstep=0.5cm,ystep=0.5cm] (0,0) grid (#1,#2);
-	\clip(0,0) rectangle (#1,#2);
-	\end{tikzpicture}
-}
-
-% ligne vun Haisecher (Jeff)
-\newcommand{\blank}[1]{{\heft{#1}{0.5}}}
-\newcommand{\midheft}[2]{{\raisebox{-0.15cm}{\heft{#1}{#2}}}}
-\newcommand{\midblank}[1]{{\raisebox{-0.15cm}{\heft{#1}{0.5}}}}
-\newcommand{\blankfield}[1]{{\centering{\heft{15}{#1}}}}
-\newcommand{\halfblankfield}[1]{{\centering{\heft{7}{#1}}}}
-\newcommand{\blankspace}{\midblank{0.5}}
-
-%---------------------------------- Geometrie
-
-\makeatletter
-\pgfset{
-	/pgf/decoration/randomness/.initial=2,
-	/pgf/decoration/wavelength/.initial=100
-}
-\pgfdeclaredecoration{sketch}{init}{
-	\state{init}[width=0pt,next state=draw,persistent precomputation={
-		\pgfmathsetmacro\pgf@lib@dec@sketch@t0
-	}]{}
-	\state{draw}[width=\pgfdecorationsegmentlength,
-	auto corner on length=\pgfdecorationsegmentlength,
-	persistent precomputation={
-		\pgfmathsetmacro\pgf@lib@dec@sketch@t{mod(\pgf@lib@dec@sketch@t+pow(\pgfkeysvalueof{/pgf/decoration/randomness},rand),\pgfkeysvalueof{/pgf/decoration/wavelength})}
-	}]{
-		\pgfmathparse{sin(2*\pgf@lib@dec@sketch@t*pi/\pgfkeysvalueof{/pgf/decoration/wavelength} r)}
-		\pgfpathlineto{\pgfqpoint{\pgfdecorationsegmentlength}{\pgfmathresult\pgfdecorationsegmentamplitude}}
-	}
-	\state{final}{}
-}
-\tikzset{xkcd/.style={decorate,decoration={sketch,segment length=0.5pt,amplitude=0.5pt}}}
-\makeatother
-
-
+\RequirePackage{JWGeneralPurposeMath}
+\RequirePackage{JWGeometry}
 
 
 %------------------ tableau de proportionnalité

@@ -1,0 +1,71 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JWImports}
+
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts and encoding
+\RequirePackage [T1]{fontenc}
+\RequirePackage [utf8]{inputenc}
+\RequirePackage [francais]{babel}
+\RequirePackage {scrpage2}
+\RequirePackage {amsthm}
+\RequirePackage {amsmath}
+\RequirePackage {amssymb}
+\RequirePackage {amsfonts}
+\RequirePackage {latexsym}
+\RequirePackage {eurosym}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Misc
+\RequirePackage [explicit]{titlesec}
+\RequirePackage [titles]{tocloft}
+\RequirePackage {color}
+\RequirePackage {setspace}
+\RequirePackage {mdwlist}
+\RequirePackage {ifthen}
+\RequirePackage [pdfborder={0 0 0}]{hyperref}
+\RequirePackage {stmaryrd}
+\RequirePackage {mathrsfs}
+\RequirePackage {pdflscape}
+
+\RequirePackage {textcomp}
+\RequirePackage {ragged2e}
+\RequirePackage {xargs}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lists and columns
+\RequirePackage {enumitem}
+\RequirePackage {tabularx}
+\RequirePackage {array}
+\RequirePackage {multicol, lipsum}
+\RequirePackage {multirow}
+\RequirePackage {tasks}
+\settasks{before-skip=\medskipamount,after-skip=\medskipamount}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Drawing
+\RequirePackage {graphicx}
+\RequirePackage [framemethod=TikZ]{mdframed}
+\RequirePackage {tkz-euclide}
+\usetkzobj{all}
+\RequirePackage {tikz}
+\RequirePackage {pgfplots}
+\pgfplotsset{compat=1.11}
+
+\usetikzlibrary{arrows, shadows, positioning}
+\usetikzlibrary{external}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{fit}
+\usetikzlibrary{arrows.meta}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Math stuff
+\RequirePackage{systeme}
+\RequirePackage{icomma}
+\RequirePackage{siunitx}
+\sisetup{
+	add-decimal-zero = true , % default setting, not needed
+	output-decimal-marker = {,} ,
+	group-separator = \, % default setting, not needed
+}
+%END_FOLD

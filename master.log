@@ -1,0 +1,584 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.25)  18 JUL 2020 16:55
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**master.tex
+(./master.tex
+LaTeX2e <2018-12-01>
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ltxdoc.cls
+Document Class: ltxdoc 2018/03/15 v2.0x Standard LaTeX documentation class
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/doc.sty
+Package: doc 2018/09/25 v2.1i Standard LaTeX documentation package (FMi)
+\c@StandardModuleDepth=\count88
+\guard@level=\count89
+\MacrocodeTopsep=\skip43
+\MacroIndent=\dimen103
+\macro@cnt=\count90
+\MacroTopsep=\skip44
+\index@excludelist=\toks14
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+\c@tracingmulticols=\count91
+\mult@box=\box27
+\multicol@leftmargin=\dimen104
+\c@unbalance=\count92
+\c@collectmore=\count93
+\doublecol@number=\count94
+\multicoltolerance=\count95
+\multicolpretolerance=\count96
+\full@width=\dimen105
+\page@free=\dimen106
+\premulticols=\dimen107
+\postmulticols=\dimen108
+\multicolsep=\skip45
+\multicolbaselineskip=\skip46
+\partial@page=\box28
+\last@line=\box29
+\maxbalancingoverflow=\dimen109
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\c@columnbadness=\count97
+\c@finalcolumnbadness=\count98
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
+\mc@col@check@num=\count99
+)
+\IndexMin=\dimen113
+\c@IndexColumns=\count100
+\GlossaryMin=\dimen114
+\c@GlossaryColumns=\count101
+\check@sum=\count102
+\bslash@cnt=\count103
+\wrong@table=\toks15
+\c@CodelineNo=\count104
+))
+\@indexfile=\write3
+\openout3 = `master.idx'.
+
+
+Writing index file master.idx
+\@glossaryfile=\write4
+\openout4 = `master.glo'.
+
+Writing glossary file master.glo 
+(./master.aux (./test1.aux))
+\openout1 = `master.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+Package doc Info: Made | a short reference for \verb on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+ (./master.toc)
+\tf@toc=\write5
+\openout5 = `master.toc'.
+
+ [1
+
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\openout2 = `test1.aux'.
+
+ (./test1.dtx
+
+! Package doc Error: Character table corrupted.
+
+See the doc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 % Right brace \} Tilde \~}
+                                %
+\Some of the ASCII characters are corrupted.
+ I now \show you both tables for comparison. 
+
+> \default~table=macro:
+->Upper-case \A \B \C \D \E \F \G \H \I \J \K \L \M \N \O \P \Q \R \S \T \U \V 
+\W \X \Y \Z Lower-case \a \b \c \d \e \f \g \h \i \j \k \l \m \n \o \p \q \r \s
+ \t \u \v \w \x \y \z Digits \0\1\2\3\4\5\6\7\8\9 Exclamation \! Double quote \
+" Hash (number) \# Dollar \$ Percent \% Ampersand \& Acute accent \' Left paren
+ \( Right paren \) Asterisk \* Plus \+ Comma \, Minus \- Point \. Solidus \/ Co
+lon \: Semicolon \; Less than \< Equals \= Greater than \> Question mark \? Com
+mercial at \@ Left bracket \[ Backslash \\ Right bracket \] Circumflex \^ Under
+score \_ Grave accent \` Left brace \{ Vertical bar \| Right brace \} Tilde \~.
+
+\character@table ...@table } \show \default~table 
+                                                  \show \used~table \fi \end...
+l.56 % Right brace \} Tilde \~}
+                                %
+
+> \used~table=macro:
+->Upper-case Lower-case Digits Exclamation \! Double quote \" Hash (number) \# 
+Dollar \$ Percent \% Ampersand \& Acute accent \’ Left paren \( Right paren \
+) Asterisk Minus Colon Equals \* \- \: \= Plus Point Semicolon Greater than \> 
+Left bracket \[ Circumflex \^ \A \B \C \D \E \F \G \H \I \J \K \L \M \N \O \P \
+Q \R \S \T \U \V \W \X \Y \Z \a \b \c \d \e \f \g \h \i \j \k \l \m \n \o \p \q
+ \r \s \t \u \v \w \x \y \z \0\1\2\3\4\5\6\7\8\9 Commercial at \@ Right bracket
+ \] Grave accent \‘ Left brace \{ Vertical bar \| Right brace \} Tilde \~.
+\character@table ...fault~table \show \used~table 
+                                                  \fi \endgroup 
+l.56 % Right brace \} Tilde \~}
+                                %
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                     \endgroup 
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\GenericError  ...                                
+                                                     \endgroup 
+l.59 % \GetFileInfo{⟨package⟩.sty}
+                                       %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 \+
+        \. \;
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.66 \+ \. \;
+             
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 66.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 66.
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.66 \+ \. \;
+             
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Extra }, or forgotten $.
+\add@accent ... \accent@spacefactor \spacefactor }
+                                                  \accent #1 #2\egroup \spac...
+l.66 \+ \. \;
+             
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.66 \+ \. \;
+             
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \mskip 
+l.66 \+ \. \;
+             
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.66 \+ \. \;
+             
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.67 Comma \, Solidus \/ Less than \<
+                                      Question mark \? Backslash \\ Undersco...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.67 ..., Solidus \/ Less than \< Question mark \?
+                                                   Backslash \\ Underscore \_
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Improper \prevdepth.
+\newpage ...everypar {}\fi \par \ifdim \prevdepth 
+                                                  >\z@ \vskip -\ifdim \prevd...
+l.70 % \maketitle
+                 
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.70 % \maketitle
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.70 % \maketitle
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[2
+
+
+]
+
+! Package inputenc Error: Unicode character ⟨ (U+27E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ⟩ (U+27E9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 70.
+
+! Package inputenc Error: Unicode character ⟨ (U+27E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ⟩ (U+27E9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ⟨ (U+27E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ⟩ (U+27E9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ⟨ (U+27E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\GenericError {               }{LaTeX Error: Can be used only in preamble}{See 
+the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.
+
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.}
+
+
+! Package inputenc Error: Unicode character ⟩ (U+27E9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+You may provide a definition with
+\GenericError {               }{LaTeX Error: Can be used only in preamble}{See 
+the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.
+
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.}
+
+! Package inputenc Error: Unicode character ⟨ (U+27E8)\MessageBreak not set u
+p for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+<argument> ...ype  H <return>  for immediate help 
+                                                  , dated \ver@ \protect \be...
+l.70 % \maketitle
+                 
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 % \maketitle
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing { inserted.
+<to be read again> 
+                   \let 
+l.70 % \maketitle
+                 
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+)
+Runaway argument?
+^^M\newcommand{\YOURMACRO}{}^^M% \end{macrocode}^^M% \end{macro}^^M%^^M\ETC.
+! File ended while scanning use of \xmacro@code.
+<inserted text> 
+                \par 
+l.17 	\DocInclude{test1}
+                        
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+)
+! Emergency stop.
+<*> master.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 630 strings out of 492616
+ 7804 string characters out of 6129481
+ 72400 words of memory out of 5000000
+ 4597 multiletter control sequences out of 15000+600000
+ 10087 words of font info for 37 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 31i,7n,21p,209b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

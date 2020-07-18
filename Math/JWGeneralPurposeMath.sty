@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JWGeneralPurposeMath}
+
+
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Symbols and operators
+\providecommand{\degre}{{\ensuremath ^\circ}}
+\renewcommand{\degre}{{\ensuremath ^\circ}} % necessary to avoid clash with other packages
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\PGCD}{PGCD}
+\DeclareMathOperator{\PPCM}{PPCM}
+
+\DeclareMathOperator{\h}{h}
+
+%Ensembles
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Parentheses
+\newcommand{\lk}{\left(}
+\newcommand{\rk}{\right)}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Writable areas (zB Heft)
+% Haisecher wéi am Heft 
+\newcommand{\heft}[2]
+{\noindent
+	\begin{tikzpicture}[scale=1.05, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\draw [color=gro,dash pattern=on 1pt off 1pt, xstep=0.5cm,ystep=0.5cm] (0,0) grid (#1,#2);
+	\clip(0,0) rectangle (#1,#2);
+	\end{tikzpicture}
+}
+
+% ligne vun Haisecher (Jeff)
+\newcommand{\blank}[1]{{\heft{#1}{0.5}}}
+\newcommand{\midheft}[2]{{\raisebox{-0.15cm}{\heft{#1}{#2}}}}
+\newcommand{\midblank}[1]{{\raisebox{-0.15cm}{\heft{#1}{0.5}}}}
+\newcommand{\blankfield}[1]{{\centering{\heft{15}{#1}}}}
+\newcommand{\halfblankfield}[1]{{\centering{\heft{7}{#1}}}}
+\newcommand{\blankspace}{\midblank{0.5}}
+%END_FOLD
