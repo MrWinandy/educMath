@@ -1,2 +1,14 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{JWTables}
+
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Proportionnalité
+
+% Tableau de proportionnalité
+\newenvironmentx{proptableau}[3][1=3.5cm,2=5,3=1cm,usedefault]
+{\setstretch{1}\setlength{\extrarowheight}{5pt}
+	\begin{center}
+		\begin{tabular}{|m{#1}|*{#2}{>{\centering\arraybackslash}m{#3}|}}
+		}{
+\end{tabular}\end{center}}
+%END_FOLD

@@ -1,2 +1,145 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{JWGraphs}
+
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Standard axis for graphing
+\pgfplotsset{
+	standardaxis/.style={
+		enlarge x limits=0.15,
+		enlarge y limits=0.15,
+		%every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=north east},
+		axis lines=middle,
+		axis line style={-Stealth,very thick},
+		xmin=-10.5,xmax=10.5,ymin=-10.5,ymax=10.5,
+		xtick distance=1,
+		ytick distance=1,
+		extra x ticks={0},
+		extra x tick style={grid style={black},xticklabel style={below left=-0.2em},xtick style={black}},
+		xticklabel style={font=\tiny},
+		yticklabel style={font=\tiny},
+		xlabel=$x$,
+		ylabel=$y$,
+		grid=major,
+		grid style={thin,densely dotted,black!20}
+}}
+
+\pgfplotsset{
+	standardaxis2/.style={
+		enlarge x limits=0.15,
+		enlarge y limits=0.15,
+		%every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=north east},
+		axis lines=middle,
+		axis line style={-Stealth,very thick},
+		xmin=-10.5,xmax=10.5,ymin=-10.5,ymax=10.5,
+		xtick distance=1,
+		ytick distance=1,
+		extra x ticks={0},
+		extra x tick style={grid style={black},xticklabel style={below left=-1.2em},xtick style={black}},
+		xticklabel style={font=\tiny, below =-0.6em},
+		yticklabel style={font=\tiny, left =-0.6em},
+		xlabel=$x$,
+		ylabel=$y$,
+		xlabel style={right=-0.2cm},
+		ylabel style={above = -0.2cm},
+		grid=major,
+		grid style={thin,densely dotted,black!20}
+}}
+
+\makeatletter
+
+\define@key{myAxis}{xmin}{\def\myxmin{#1}}
+\define@key{myAxis}{xmax}{\def\myxmax{#1}}
+\define@key{myAxis}{ymin}{\def\myymin{#1}}
+\define@key{myAxis}{ymax}{\def\myymax{#1}}
+\define@key{myAxis}{xlabel}{\def\myxlabel{#1}}
+\define@key{myAxis}{ylabel}{\def\myylabel{#1}}
+\define@key{myAxis}{scale}{\def\myscale{#1}}
+\define@key{myAxis}{addstyle}{\def\myaddstyle{#1}}
+
+\setkeys{myAxis}{xmin=-10.5,ymin=-10.5,xmax=10.5,ymax=10.5,xlabel=$ x $,ylabel=$ y $,scale=0.8,addstyle={}}
+
+\makeatother
+
+
+
+\newenvironment{myAxis}[1][]{
+	\setkeys{myAxis}{#1}
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		unit vector ratio*=1 1 1,
+		width = \myscale\textwidth,
+		standardaxis,
+		xmin=\myxmin,
+		ymin=\myymin,
+		xmax=\myxmax,
+		ymax=\myymax,
+		xlabel=\myxlabel,
+		ylabel=\myylabel,
+		\myaddstyle]
+	}{
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+}
+
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Axis for statistical representation of frequencies
+\pgfplotsset{
+	statisticsaxis/.style={
+		enlarge x limits=0.15,
+		enlarge y limits=0.15,
+		%every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=north west},
+		axis x line=bottom,
+		axis y line=left,
+		axis line style={-Stealth,very thick},
+		xmin=0,xmax=10.5,ymin=0,ymax=110,
+		xtick distance=1,
+		%		ytick distance=5,
+		ytick={0,5,...,100},
+		%		extra x ticks={0},
+		extra x tick style={grid style={black},xticklabel style={below left=-0.2em},xtick style={black}},
+		xticklabel style={font=\tiny},
+		yticklabel style={font=\tiny},
+		xlabel=$x$,
+		ylabel=$\%$,
+		grid=major,
+		grid style={thin,densely dotted,black!20}
+}}
+
+\makeatletter
+
+\define@key{statAxis}{ymax}{\def\myStatymax{#1}}
+\define@key{statAxis}{xmax}{\def\myStatxmax{#1}}
+\define@key{statAxis}{xlabel}{\def\myStatxlabel{#1}}
+\define@key{statAxis}{ylabel}{\def\myStatylabel{#1}}
+\define@key{statAxis}{scale}{\def\myStatscale{#1}}
+\define@key{statAxis}{addstyle}{\def\myStataddstyle{#1}}
+
+\setkeys{statAxis}{xmax=10.5,ymax=110,xlabel=$ x $,ylabel=Fréquences cumulées en $ \% $,scale=0.8,addstyle={}}
+
+\makeatother
+
+\newenvironment{CFPlot}[1][]{
+	\setkeys{statAxis}{#1}
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		statisticsaxis,
+		width = \myStatscale\textwidth,
+		xmax=\myStatxmax,
+		ymax=\myStatymax,
+		xlabel=\myStatxlabel,
+		ylabel=\myStatylabel,
+		\myStataddstyle]
+	}{
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+}
+%END_FOLD
+

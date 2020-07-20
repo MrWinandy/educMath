@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.25)  18 JUL 2020 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.25)  20 JUL 2020 22:43
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1985,7 +1985,16 @@ Package: JWGeneralPurposeMath
 (/Users/jeffwinandy/Library/texmf/tex/latex/Math/JWGeometry.sty
 Package: JWGeometry 
 )
+(/Users/jeffwinandy/Library/texmf/tex/latex/Math/JWTables.sty
+Package: JWTables 
+)
+(/Users/jeffwinandy/Library/texmf/tex/latex/Math/JWGraphs.sty
+Package: JWGraphs 
+)
+(/Users/jeffwinandy/Library/texmf/tex/latex/Math/JWFractions.sty
+Package: JWFractions 
 \c@tmpcounter=\count403
+)
 \c@itemcounter=\count404
 )
 (./examClsTest.aux)
@@ -2320,10 +2329,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13.
  ) 
 Here is how much of TeX's memory you used:
- 52456 strings out of 492616
- 1177374 string characters out of 6129481
- 1595214 words of memory out of 5000000
- 55431 multiletter control sequences out of 15000+600000
+ 52477 strings out of 492616
+ 1178025 string characters out of 6129481
+ 1593661 words of memory out of 5000000
+ 55443 multiletter control sequences out of 15000+600000
  646844 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,13n,112p,9092b,787s stack positions out of 5000i,500n,10000p,200000b,80000s

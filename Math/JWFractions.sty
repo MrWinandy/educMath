@@ -1,2 +1,80 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{JWFractions}
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Graphical representation of fractions
+\makeatletter
+\define@key{myFraxx}{scale}{\def\myFraxxscale{#1}}
+\define@key{myFraxx}{color}{\def\mycolor{#1}}
+\define@key{myFraxx}{opacity}{\def\myopacity{#1}}
+\define@key{myFraxx}{offset}{\def\myoffset{#1}}
+\makeatother
+
+\setkeys{myFraxx}{color=black,opacity=30,scale=1,offset=0}
+
+% Fraction as Pie
+\newcommand{\fracPie}[3][1]{
+	\setkeys{myFraxx}{#1}
+	\begin{tikzpicture}
+	\def\radius{\myFraxxscale*1cm}
+	\def\angl{360/#3}
+	\filldraw[fill=\mycolor!\myopacity] (\angl+\angl*\myoffset:\radius) arc (\angl+\angl*\myoffset:(#2+1)*\angl+\angl*\myoffset:\radius) -- (0,0) -- cycle;
+	\foreach \n in {1,...,#3}{
+		\draw (0,0) -- (\n*\angl:\radius);
+	}
+	\draw (0,0) circle (\radius);
+	\end{tikzpicture}
+	\setkeys{myFraxx}{color=black,opacity=30,scale=1,offset=0}
+}
+
+
+% Fraction as horizontal rectangle
+\newcommand{\fracRectH}[3][1]{
+	\setkeys{myFraxx}{#1}
+	\begin{tikzpicture}
+	\def\long{\myFraxxscale*3cm/#3}
+	\filldraw[fill=\mycolor!\myopacity] (0,0) rectangle (\long*#2,\long);
+	\foreach \n in {1,...,#3}{
+		\draw (\n*\long,0) -- (\n*\long,\long);
+	}
+	\draw (0,0) rectangle (\long*#3,\long);
+	\end{tikzpicture}
+	\setkeys{myFraxx}{color=black,opacity=30,scale=1,offset=0}
+}
+
+
+% Fraction as vertical rectangle
+\newcommand{\fracRectV}[3][1]{
+	\setkeys{myFraxx}{#1}
+	\begin{tikzpicture}
+	\def\long{\myFraxxscale*3cm/#3}
+	\filldraw[fill=\mycolor!\myopacity] (0,0) rectangle (\long,\long*#2);
+	\foreach \n in {1,...,#3}{
+		\draw (0,\n*\long) -- (\long,\n*\long);
+	}
+	\draw (0,0) rectangle (\long,\long*#3);
+	\end{tikzpicture}
+	\setkeys{myFraxx}{color=black,opacity=30,scale=1,offset=0}
+}
+
+
+% Fraction as 2D rectangle
+\newcounter{tmpcounter}
+\newcommand{\fracRectTwoD}[3][1]{
+	\setkeys{myFraxx}{#1}
+	\begin{tikzpicture}
+	\def\long{\myFraxxscale*3cm/#3}
+	\setcounter{tmpcounter}{0}
+	\foreach \i in {#2}{
+		\edef\counter{\arabic{tmpcounter}}
+		\filldraw[fill=\mycolor!\myopacity] (\counter*\long,0) rectangle (\counter*\long+\long,\long*\i);
+		\foreach \n in {1,...,#3}{
+			\draw (\counter*\long,\n*\long) -- (\counter*\long+\long,\n*\long);
+		}
+		\draw (\counter*\long,0) rectangle (\counter*\long+\long,\long*#3);
+		\stepcounter{tmpcounter}
+	}
+	\end{tikzpicture}
+	\setkeys{myFraxx}{color=black,opacity=30,scale=1,offset=0}
+}
+
+%END_FOLD
