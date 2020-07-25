@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.25)  20 JUL 2020 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.25)  23 JUL 2020 18:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2645,36 +2645,177 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 12.
+
+! LaTeX Error: Environment proptableau undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 	\begin{proptableau}
+                         [1.5cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.16 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.17 		$ x $ &
+                &  &  & ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.17 		$ x $ &  &
+                   &  & ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.17 		$ x $ &  &  &
+                      & ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.17 		$ x $ &  &  &  &
+                        ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.18 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+! Misplaced alignment tab character &.
+l.19 		$ y \text{ ou } f(x) $ &
+                                 &  &  & ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.19 		$ y \text{ ou } f(x) $ &  &
+                                    &  & ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.19 		$ y \text{ ou } f(x) $ &  &  &
+                                       & ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.19 		$ y \text{ ou } f(x) $ &  &  &  &
+                                         ... \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.20 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{proptableau}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 	\end{proptableau}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 [1
 
 
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 13.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 22.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 22.
 
 (./DesignBaseTest.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 13.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 13.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 22.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 22.
 Package rerunfilecheck Info: File `DesignBaseTest.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 22.
  ) 
 Here is how much of TeX's memory you used:
- 52848 strings out of 492616
- 1181122 string characters out of 6129481
+ 52851 strings out of 492616
+ 1181162 string characters out of 6129481
  1577646 words of memory out of 5000000
- 55850 multiletter control sequences out of 15000+600000
- 594518 words of font info for 88 fonts, out of 8000000 for 9000
+ 55853 multiletter control sequences out of 15000+600000
+ 604626 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,10n,106p,9093b,1100s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb>
-Output written on DesignBaseTest.pdf (1 page, 18882 bytes).
+ve/2019/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb>
+Output written on DesignBaseTest.pdf (1 page, 22763 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
