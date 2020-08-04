@@ -133,7 +133,7 @@
 %-——————oir
 
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
-\newcommand{\devoir}[3][\protect\total{totalpoints}]{
+\newcommand{\devoir}[3][\protect\number\totvalue{totalpoints}]{
 	\setenumerate[1]{label=\alph*), ref=\theenumi.\alph*}
 	
 	\caText
@@ -185,13 +185,13 @@
 }
 
 
-%Questions
-\newcounter{temp}
-\newcommand{\quest}[1] % Question environnement
-{\refstepcounter{temp}
-	\bigskip
-	{\bfseries\large Question \arabic{temp}} \hfill {(#1 points)} \\[1.5ex] 
-}
+%%Questions
+%\newcounter{temp}
+%\newcommand{\quest}[1] % Question environnement
+%{\refstepcounter{temp}
+%	\bigskip
+%	{\bfseries\large Question \arabic{temp}} \hfill {(#1 points)} \\[1.5ex] 
+%}
 
 %Questions
 \newcounter{newtemp}
@@ -207,22 +207,46 @@
 	\totalpoints{#2}
 }
 
+\newtotcounter{questionCounter}
+
+
+\newcommand*{\totalQuestPoints}[1]{\expandafter\addtocounter\expandafter{\currentCounter}{#1}}
+
+\newenvironment{quest}{
+	\refstepcounter{newtemp}
+	\def\baseName{count}
+	\edef\currentCounter{\baseName\thenewtemp}
+	\expandafter\newtotcounter\expandafter{\currentCounter}
+		
+	\bigskip
+	{\bfseries\large Question \arabic{newtemp}} \hfill {
+		\begin{tikzpicture}[baseline=-0.1cm]
+		\node(p) at (0,-0.2) {\huge $ \frac{\Huge \  }{\number\expandafter\totvalue\expandafter{\currentCounter}} $};
+		\node[circle,draw,inner sep=0.2cm, label=](p) at (0,0) {\phantom{\huge $ \frac{\Huge \  }{\number\expandafter\totvalue\expandafter{\currentCounter}} $}};
+		\end{tikzpicture}}\\[1.5ex]
+}{
+	\totalpoints{\number\expandafter\totvalue\expandafter{\currentCounter}}
+}
+
+
+
+
+\newcommand{\points}[1]{\marginnote{\normalsize $ \frac{\ }{#1} $} \totalQuestPoints{#1}}
+\newcommand{\doublepoints}[2]{\marginnote{\normalsize $ \frac{\ }{#1} \quad \frac{\ }{#2} $} \totalQuestPoints{#1} \totalQuestPoints{#2}}
+\newcommand{\triplepoints}[3]{\marginnote{\normalsize $ \frac{\ }{#1} \ \frac{\ }{#2} \ \frac{\ }{#3} $} \totalQuestPoints{#1} \totalQuestPoints{#2} \totalQuestPoints{#3}}
+
+
 \newcommand{\SLBase}[2]{
-\begin{center}
-	\textbf{#1 \begin{tikzpicture}[baseline=-0.1cm]
-		\node(p) at (0,-0.2) {\huge $ \frac{\Huge \  }{#2} $};
-		\node[circle,draw,inner sep=0.2cm, label=](p) at (0,0) {\phantom{\huge $ \frac{\Huge \  }{#2} $}};
-		\end{tikzpicture} }
-\end{center}
+	\begin{center}
+		\textbf{#1 \begin{tikzpicture}[baseline=-0.1cm]
+			\node(p) at (0,-0.2) {\huge $ \frac{\Huge \  }{#2} $};
+			\node[circle,draw,inner sep=0.2cm, label=](p) at (0,0) {\phantom{\huge $ \frac{\Huge \  }{#2} $}};
+			\end{tikzpicture} }
+	\end{center}
 }
 
 \newcommand{\SL}[1]{\SLBase{Soin et langage mathématique:}{#1}}
 \newcommand{\SLGeometrie}[1]{\SLBase{Soin, langage mathématique et précision des figures:}{#1}}
-
-\newcommand{\points}[1]{\marginnote{\normalsize $ \frac{\ }{#1} $}}
-\newcommand{\doublepoints}[2]{\marginnote{\normalsize $ \frac{\ }{#1} \quad \frac{\ }{#2} $}}
-\newcommand{\triplepoints}[3]{\marginnote{\normalsize $ \frac{\ }{#1} \ \frac{\ }{#2} \ \frac{\ }{#2} $}}
-
 
 \pagestyle{scrheadings}
 \renewcommand{\chapterpagestyle}{scrheadings}
