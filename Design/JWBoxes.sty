@@ -1,0 +1,129 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JWBoxes}
+
+\RequirePackage[framemethod=TikZ]{mdframed}
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Styles
+\mdfdefinestyle{envBoxBase}{
+	linecolor = \baseColor!80,
+	middlelinewidth = 2pt,
+	roundcorner=5pt,
+	backgroundcolor = \baseColor!5,
+	innertopmargin=0.2cm,
+	innerbottommargin=0.2cm,
+	frametitlebelowskip=0cm,
+	frametitleaboveskip=0cm,
+	innerleftmargin=\topskip,
+	innerrightmargin=\topskip,
+	frametitlebackgroundcolor=\baseColor!80,
+	frametitlefont=\color{white}\Large\bfseries,
+	nobreak=true
+}
+
+
+\tikzset{
+	warningsymbol/.style={
+		rectangle,
+		draw=\baseColor,
+		fill=white,
+		scale=1,
+		overlay}
+}
+
+\mdfdefinestyle{algoBox}{
+	linecolor = \baseColor!80,
+	roundcorner=5pt,
+	backgroundcolor = \baseColor!5,
+	innertopmargin=10pt,
+	innerbottommargin=10pt,
+	frametitlebelowskip=0cm,
+	frametitleaboveskip=0cm,
+	innerleftmargin=\topskip,
+	innerrightmargin=\topskip,
+	topline=false,%
+	rightline=false,%
+	bottomline=false,%
+	linewidth = 6pt,
+	frametitlebackgroundcolor=\baseColor!80,
+	frametitlefont=\color{white}\Large\bfseries,
+	nobreak=true,
+	%	singleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$) 
+	%		node[warningsymbol] {\danger};}
+}
+
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Actual boxes
+\newcommand{\JWAddNewTheoremStyle}[5]{
+	\mdtheorem[style=#5]{#1}{#2}
+	\newenvironment{#4}[1][]{
+		\def\baseColor{#3}
+		\begin{#1}[##1]
+			\addcontentsline{toc}{subsection}{#2 \arabic{#1}: ##1}
+		}{\end{#1}}
+}
+
+\JWAddNewTheoremStyle{definitionEnv}{Définition}{indianred}{defn}{envBoxBase}
+\JWAddNewTheoremStyle{stationEnv}{Station}{black}{station}{envBoxBase}
+\JWAddNewTheoremStyle{activityEnv}{Activité}{chocolate}{activite}{envBoxBase}
+\JWAddNewTheoremStyle{propEnv}{Propriété}{forestgreen}{prop}{envBoxBase}
+\JWAddNewTheoremStyle{extypeEnv}{Algorithme}{blue}{algo}{algoBox}
+
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercices Boxes formatting
+
+\newlength\netlength
+
+\newcommand{\JWAddNewExoStyle}[4]{
+	\newcounter{#1}[chapter]
+	\newcommand{#4}[1]{
+		\def\baseColor{#3}
+		\refstepcounter{#1}
+		\def\myInnerSep{10pt}
+		\def\myLinewidth{2pt}
+		\setlength{\netlength}{\textwidth}  % Net length is textwidth without the inner separation on both sides
+		\addtolength{\netlength}{-\myInnerSep}
+		\addtolength{\netlength}{-\myLinewidth}
+		\addtolength{\netlength}{-\myInnerSep}
+		\addtolength{\netlength}{-\myLinewidth}
+		\noindent%
+		\begin{center}
+			\begin{tikzpicture}
+			\node[draw=\baseColor!80, rounded corners, inner sep=\myInnerSep,line width=\myLinewidth] (exobox)  %Border
+				{\begin{minipage}{\netlength}
+					\tikzset{every picture/.style={rounded corners=0}}
+					\medskip \small ##1
+					\end{minipage}
+				};
+			\node at (exobox.north west) [xshift=\myInnerSep, anchor=west, fill=\baseColor!80, text=white, rounded corners]{#2 \arabic{#1}}; %Title
+			\end{tikzpicture}
+		\end{center}}
+			
+}
+
+\JWAddNewExoStyle{exercicesEnv}{Exercice}{royalblue}{\exoBox}
+\JWAddNewExoStyle{solutionsEnv}{Solution}{royalblue}{\solBox}
+\JWAddNewExoStyle{exemplesEnv}{Exemple}{chromeyellow}{\exempleBox}
+\newcommand{\addexemple}{\exempleBox}
+%END_FOLD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

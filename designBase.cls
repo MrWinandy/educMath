@@ -22,15 +22,12 @@
 \RequirePackage{multicol}
 \RequirePackage{marginnote}
 
-\author{SPECIFY AUTHOR}
-\date{SPECIFY DATE}
-\def\laClasse{SPECIFY CLASS}
-\def\laSaison{2018/2019}
-\def\init{Jeff Winandy}
-\def\logo{\empty}
-\def\caText{\empty}
-
-
+\usepackage{kpfonts}
+\usepackage{JWImports}
+\usepackage{JWColors}
+\usepackage{JWBoxes}
+\usepackage{JWExercices}
+\usepackage{JWFormats}
 
 \renewcommand{\leq}{\leqslant}
 \renewcommand{\geq}{\geqslant}

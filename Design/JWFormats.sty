@@ -1,0 +1,111 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JWBoxes}
+
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter/section formatting
+\titlespacing{\chapter}{0cm}{0cm}{0cm}
+\titleformat{\chapter}[display]
+{\huge\bfseries}
+{
+	\chapterbox{#1}
+}
+{0pt}
+{\bfseries}{\normalfont}
+
+\titleformat{\section}[display]
+{\huge\bfseries}
+{
+	\sectionbox{#1}
+}
+{0pt}
+{\bfseries}{\normalfont}
+
+
+
+\newcommand{\chapterbox}[1]{
+	\def\chapIndent{2mm}
+	\def\boxHeight{2cm}
+	\begin{tikzpicture}[rounded corners,thick]
+	\node (title) at (0,0) {\chaptername};
+	\draw (title.west) --++(180:\chapIndent) --++(90:\boxHeight) --++(0:\textwidth) --++(-90:\boxHeight) -- (title.east);
+	\node[anchor=west,fill=white,inner xsep=-2mm,xshift=\chapIndent,draw,yshift=\boxHeight/2] (chapternumber) at (title.east) {\fontsize{110}{132} \selectfont \thechapter};
+	\node[anchor=west,](label) at (chapternumber.east) {\Huge#1};
+	\end{tikzpicture}
+}
+
+
+\pgfdeclarelayer{bg}    % declare background layer
+\pgfsetlayers{bg,main}  % set the order of the layers (main is the standard layer)
+\newcommand{\sectionbox}[1]{
+	\def\chapIndent{2mm}
+	\def\boxHeight{1cm}
+	\begin{tikzpicture}[rounded corners,thick]
+	\node[anchor=west,fill=white,draw,inner xsep=0mm] (chapternumber) at (0,0) {\fontsize{40}{48} \selectfont \thesection};
+	\begin{pgfonlayer}{bg}    % select the background layer
+	\node[anchor=west,draw,xshift=-5mm](label) at (chapternumber.east) {\hspace*{5mm}\huge#1};
+	\end{pgfonlayer}
+	\end{tikzpicture}
+}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table of contents
+\renewcommand{\numberline}[1]{%
+	\makebox[.8cm][l]{#1}\hspace{1ex}}
+
+\newcommand*\dottedtocline{\leavevmode%
+	\leaders\hbox{$\m@th
+		\mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+		mu$}\hfill\kern\z@} 
+
+
+\renewcommand{\l@chapter}[2]{%
+	\addvspace{1em}%                      vert. Abstand
+	\pagebreak[3]%                        Seitenumbruch hier erlauben
+	\noindent%                            nicht einr√ºcken
+	{\bfseries\huge %
+		%   \Roman{chapter}%
+		%   \hspace{1ex}%
+		\rmfamily #1%
+	}%
+	\hfill%
+	{\bfseries \huge #2}%          Text +  Nummer
+	\par%                                 Zeilenumbruch
+	\nopagebreak%                         Seitenumbruch nicht erlauben
+	\def\scriptcolor{navy}%               Head- & Footline Faarw vum Inhaltsverzeichnis
+}
+% section
+\renewcommand{\l@section}[2]{%
+	\noindent\hspace{0.5cm}%                hor. Einr√ºcken (1cm)
+	\bfseries\rmfamily #1\dottedtocline#2%                           Text + Nummer
+	\par%                                 Zeilenumbruch
+	\nopagebreak[2]%                      m√∂glichst kein Seitenumbruch
+}
+
+%% subsection
+\renewcommand{\l@subsection}[2]{%
+	\noindent\hspace{1cm}%                hor. Einr√ºcken (2cm)
+	\normalfont\rmfamily #1\dottedtocline#2%                           Text + Nummer
+	\par%                                 Zeilenumbruch
+}
+%END_FOLD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

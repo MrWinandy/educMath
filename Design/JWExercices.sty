@@ -1,0 +1,70 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JWExercices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appearence of Exercices Boxes to be changend in JWBoxes.sty %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercices saving
+\newcommand{\addexo}[2]{%
+	\ifx\exos\undefined
+		\def\exos{{#1}/{#2}}
+	\else
+		\if\exos0
+			\def\exos{{#1}/{#2}}
+		\else
+			\g@addto@macro\exos{,{#1}/{#2}}
+		\fi
+	\fi%
+}
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Types of exercices
+\newcommand{\printExoSol}[3][1]{
+	\begin{center}
+		\begin{minipage}{#1\textwidth}
+			\exoBox{#2}
+		\end{minipage}%
+	\def\temp{#3} % Needed to be able to check if the argument is empty
+	\ifx\temp\empty	% Check if there is a solution, if not, only step the counter
+		\stepcounter{solutionsEnv} 
+	\else 
+		\ifdim#1pt>0.49pt % Decide whether the whole thing fits into one line
+			\\[\baselineskip] 
+		\else 
+			\hfill 
+		\fi 
+		\begin{minipage}{#1\textwidth}
+			\solBox{#3}
+		\end{minipage}
+	\fi
+	\end{center}
+}
+
+\newcommand{\addexoInline}[2]{
+	\addexo{#1}{#2}
+	\printExoSol[0.49]{#1}{#2}
+}
+
+\newcommand{\addexoInlineVertical}[2]{
+\addexo{#1}{#2}
+\printExoSol{#1}{#2}
+}
+
+\newcommand{\addexoInlineNoSol}[1]{
+	\addexo{#1}{}
+	\printExoSol{#1}{}
+}
+
+%END_FOLD
+
+
+
+
+
+
+
+
+
+
+
+
+

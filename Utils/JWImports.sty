@@ -18,6 +18,7 @@
 %BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Misc
 \RequirePackage [explicit]{titlesec}
 \RequirePackage [titles]{tocloft}
+
 \RequirePackage {color}
 \RequirePackage {setspace}
 \RequirePackage {mdwlist}
@@ -39,7 +40,7 @@
 \RequirePackage {multicol, lipsum}
 \RequirePackage {multirow}
 \RequirePackage {tasks}
-\settasks{before-skip=\medskipamount,after-skip=\medskipamount}
+\settasks{before-skip=\bigskipamount,after-skip=\medskipamount}
 %END_FOLD
 
 %BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Drawing
@@ -68,4 +69,6 @@
 	output-decimal-marker = {,} ,
 	group-separator = \, % default setting, not needed
 }
+
+\RequirePackage{mathtools}
 %END_FOLD

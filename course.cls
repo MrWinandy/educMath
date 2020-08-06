@@ -1,13 +1,24 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{exam}[2018/09/25 Devoir en classe]
+\ProvidesClass{course}[2018/09/25 Cours]
 
+
+\def\leAuteur{Jeff Winandy}
+\date{SPECIFY DATE}
+\def\laClasse{SPECIFY CLASS}
+\def\laSaison{\empty}
+\def\init{Jeff Winandy}
+\def\logo{\empty}
+\def\caText{\empty}
+
+\RequirePackage{xkeyval}
+%\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
+\DeclareOptionX{logo}[LTL.png]{\def\logo{#1}}
+\DeclareOptionX{saison}[]{\def\laSaison{#1}}
+\DeclareOptionX{classe}[SPECIFY CLASS]{\def\laClasse{#1}}
+\DeclareOptionX{author}[Jeff Winandy]{\def\leAuteur{#1}}
+\ProcessOptionsX
 
 \LoadClass{designBase} %a4paper; landscape
-
-
-\DeclareOption{lge}{\def\logo{LGE.png}}
-\DeclareOption{ltma}{\def\logo{LTMA.png}}
-\ProcessOptions\relax
 
 \newcommand{\classe}[1]{
 	\def\laClasse{#1}
@@ -17,42 +28,31 @@
 	\def\laSaison{#1}
 }
 
-\newcommand{\scriptcolor}{black}
-
+\providecommand{\scriptcolor}{black}
 \newcommand{\highlight}[1]{{\color{red} #1}}
 
+%BEGIN_FOLD%---------------------- Headline/Footline
+\pagestyle{scrheadings}
+\renewcommand{\chapterpagestyle}{scrheadings}
 
-
-
-
-
-
-%---------------------- Headline/Footline
 \setheadwidth{\textwidth}
-%\setheadsepline{1pt}[\color{\scriptcolor}]
+\setheadsepline{.5pt}[\color{\scriptcolor}]
 
-\lohead{\laClasse}
-%\scshape\footnotesize FISAR
-
-
-\lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
-\rehead{\laClasse}
-\ohead{\thedate}
-
+\setfootwidth{\textwidth}
 \setfootsepline{.5pt}[\color{\scriptcolor}]
 
 
+\ihead{\laClasse}
+\ohead{\scshape \thepage}
 
-%\ifoot{\small \classe}
-%\cfoot{\normalfont\small \lycee}
-%\ofoot{\small \season}
 
-\ifoot{\scshape \theauthor}
-\cfoot{}
+
+\ifoot{\scshape \leAuteur}
+\cfoot{\laSaison} % Needed to eliminate page number in cfoot
 \ofoot{
 	\ifthenelse{\equal{\logo}\empty}
 	{}
-	{\includegraphics[height=1.5cm]{\logo}}
+	{\includegraphics[height=2cm]{\logo}}
 }
+%END_FOLD
 
-\input{DesignBase.tex}
