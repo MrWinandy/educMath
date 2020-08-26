@@ -6,7 +6,7 @@
 \RequirePackage [T1]{fontenc}
 \RequirePackage [utf8]{inputenc}
 \RequirePackage [francais]{babel}
-\RequirePackage {scrpage2}
+\RequirePackage {scrlayer-scrpage}
 \RequirePackage {amsthm}
 \RequirePackage {amsmath}
 \RequirePackage {amssymb}
@@ -31,23 +31,28 @@
 \RequirePackage {textcomp}
 \RequirePackage {ragged2e}
 \RequirePackage {xargs}
+%\RequirePackage{adjustbox}
+\RequirePackage{keycommand}
+
 %END_FOLD
 
 %BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lists and columns
 \RequirePackage {enumitem}
 \RequirePackage {tabularx}
 \RequirePackage {array}
+\RequirePackage [table]{xcolor}
 \RequirePackage {multicol, lipsum}
 \RequirePackage {multirow}
 \RequirePackage {tasks}
-\settasks{before-skip=\bigskipamount,after-skip=\medskipamount}
+\settasks{before-skip=\medskipamount,after-skip=\medskipamount}
+
 %END_FOLD
 
 %BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Drawing
 \RequirePackage {graphicx}
 \RequirePackage [framemethod=TikZ]{mdframed}
 \RequirePackage {tkz-euclide}
-\usetkzobj{all}
+%\usetkzobj{all}
 \RequirePackage {tikz}
 \RequirePackage {pgfplots}
 \pgfplotsset{compat=1.11}

@@ -1,0 +1,50 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JWLists}
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Multi column lists
+%\newenvironment{multicolList}[3][]{
+%	\setlength{\columnseprule}{0pt}
+%	\def\colNum{#2}
+%	\def\envName{#3}
+%	\ifnum \colNum = 1
+%	\else
+%	\begin{multicols}{\colNum}
+%		\fi
+%		\begin{\envName}[#1]
+%		}{
+%		\end{\envName}
+%		\ifnum \colNum = 1
+%		\else
+%	\end{multicols}
+%	\fi
+%}
+
+\newenvironment{multicolList}[3][]{
+		\begin{tasks}[#1](#2)
+		}{
+		\end{tasks}
+}
+
+\newenvironment{multicolEnum}[1][2]{
+	\begin{multicolList}[label=\alph*)]{#1}{enumerate}
+}{
+	\end{multicolList}
+}
+
+\newenvironment{multicolItem}[1][2]{
+	\begin{multicolList}[label=\textbullet]{#1}{itemize}
+	}{
+	\end{multicolList}
+}
+%END_FOLD
+
+
+
+
+
+
+
+
+
+
+

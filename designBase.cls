@@ -8,7 +8,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[francais]{babel}
-\RequirePackage{scrpage2}
+\RequirePackage{scrlayer-scrpage}
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \RequirePackage{enumitem}
@@ -22,12 +22,14 @@
 \RequirePackage{multicol}
 \RequirePackage{marginnote}
 
-\usepackage{kpfonts}
-\usepackage{JWImports}
-\usepackage{JWColors}
-\usepackage{JWBoxes}
-\usepackage{JWExercices}
-\usepackage{JWFormats}
+%\RequirePackage{kpfonts}
+\RequirePackage{JWImports}
+\RequirePackage{JWColors}
+\RequirePackage{JWBoxes}
+\RequirePackage{JWExercices}
+\RequirePackage{JWFormats}
+\RequirePackage{JWLists}
+
 
 \renewcommand{\leq}{\leqslant}
 \renewcommand{\geq}{\geqslant}

@@ -29,7 +29,7 @@
 }
 
 \providecommand{\scriptcolor}{black}
-\newcommand{\highlight}[1]{{\color{red} #1}}
+\newcommand{\highlight}[1]{{\color{\baseColor!80!black} #1}}
 
 %BEGIN_FOLD%---------------------- Headline/Footline
 \pagestyle{scrheadings}
@@ -52,7 +52,7 @@
 \ofoot{
 	\ifthenelse{\equal{\logo}\empty}
 	{}
-	{\includegraphics[height=2cm]{\logo}}
+	{\includegraphics[height=1cm]{\logo}}
 }
 %END_FOLD
 

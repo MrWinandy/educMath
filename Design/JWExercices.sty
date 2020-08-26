@@ -15,28 +15,48 @@
 		\fi
 	\fi%
 }
+
+
+\newcommand{\resetexos}{\def\exos{0}}
 %END_FOLD
 
 %BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Types of exercices
-\newcommand{\printExoSol}[3][1]{
+\newcommand{\printExoBase}[5][1]{
 	\begin{center}
-		\begin{minipage}{#1\textwidth}
-			\exoBox{#2}
+		\begin{minipage}{#1\columnwidth}
+			#2{#4}
 		\end{minipage}%
-	\def\temp{#3} % Needed to be able to check if the argument is empty
-	\ifx\temp\empty	% Check if there is a solution, if not, only step the counter
-		\stepcounter{solutionsEnv} 
-	\else 
-		\ifdim#1pt>0.49pt % Decide whether the whole thing fits into one line
-			\\[\baselineskip] 
+		\def\temp{#5} % Needed to be able to check if the argument is empty
+		\ifx\temp\empty	% Check if there is a second exo/solution to print
 		\else 
-			\hfill 
+		\ifdim#1pt>0.49pt % Decide whether the whole thing fits into one line
+		\\[\baselineskip] 
+		\else 
+		\hfill 
 		\fi 
-		\begin{minipage}{#1\textwidth}
-			\solBox{#3}
+		\begin{minipage}{#1\columnwidth}
+			#3{#5}
 		\end{minipage}
-	\fi
+		\fi
 	\end{center}
+}
+
+
+\newcommand{\printExoSol}[3][1]{
+	\def\temp{#3} % Needed to be able to check if the argument is empty
+	\ifx\temp\empty	% Check if there is a solution, if not, step the counter
+		\stepcounter{solutionsEnv} 
+	\fi
+	\printExoBase[#1]{\exoBox}{\solBox}{#2}{#3}
+}
+\newcommand{\printExoExo}[3][1]{
+	\def\temp{#3} % Needed to be able to check if the argument is empty
+	\stepcounter{solutionsEnv} 
+	\ifx\temp\empty	% Check if there is a second exo, in that case step the counter again
+	\else
+		\stepcounter{solutionsEnv} 
+	\fi
+	\printExoBase[#1]{\exoBox}{\exoBox}{#2}{#3}
 }
 
 \newcommand{\addexoInline}[2]{
@@ -45,8 +65,8 @@
 }
 
 \newcommand{\addexoInlineVertical}[2]{
-\addexo{#1}{#2}
-\printExoSol{#1}{#2}
+	\addexo{#1}{#2}
+	\printExoSol{#1}{#2}
 }
 
 \newcommand{\addexoInlineNoSol}[1]{
@@ -54,9 +74,55 @@
 	\printExoSol{#1}{}
 }
 
+\newcommand{\addexoInlineDouble}[2]{
+	\addexo{#1}{}
+	\addexo{#1}{}
+	\printExoExo[0.49]{#1}{#2}
+}
+
 %END_FOLD
 
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Printing exercices grouped together
+\newcounter{exo}[chapter]
+\def\exoColor{royalblue}
+\tikzstyle{exosty}=[anchor=base,%
+rectangle,%
+rounded corners = 5pt,
+inner sep=2pt,%
+color=white,
+bottom color=\exoColor!80,%
+top color=\exoColor!80,%
+minimum width=.75cm,
+minimum height=.5cm,
+]
 
+\newcommand{\kescht}[1]{\tikz[baseline]{\node[exosty] (exo) {\bfseries\textsf{#1}};}}
+
+\newcommand{\exo}
+{\par%
+	\refstepcounter{exo}%
+	\noindent%
+	\tikz[baseline]{\node[exosty] (exo) {\bfseries\textsf{\theexo}};}
+}
+
+\newcommand{\printExoswithBreaksAfter}[1][]{
+	%	\vspace{-1.75\baselineskip}%
+	\setlength{\columnseprule}{2pt}
+	\def\columnseprulecolor{\color{\exoColor!80}}
+	\begin{multicols}{2}%
+		\foreach \x/\y in \exos {
+			\foreach \i in {#1}{
+				\ifnum \value{exo}=\i
+					\columnbreak 
+				\fi
+			}
+			\exo \x 
+		}
+	\end{multicols}%
+	%	\vspace{-.5cm}%
+	%\noindent\color{\scriptcolor}\rule[0cm]{\textwidth}{1.5pt}%
+}
+%END_FOLD
 
 
 
