@@ -36,13 +36,13 @@
 		xtick distance=1,
 		ytick distance=1,
 		extra x ticks={0},
-		extra x tick style={grid style={black},xticklabel style={below left=-1.2em},xtick style={black}},
-		xticklabel style={font=\tiny, below =-0.6em},
-		yticklabel style={font=\tiny, left =-0.6em},
+		extra x tick style={grid=major, grid style={black},xticklabel style={inner sep=4pt,anchor=north east},xtick style={black}},
+		xticklabel style={font=\tiny, anchor = north, inner sep = 4pt},
+		yticklabel style={font=\tiny, anchor = east, inner sep = 4pt},
 		xlabel=$x$,
 		ylabel=$y$,
-		xlabel style={above left=0.05cm},
-		ylabel style={below right = 0.05cm},
+		xlabel style={anchor = south east, inner sep = 4pt},
+		ylabel style={anchor = north west, inner sep = 4pt},
 		grid=major,
 		grid style={thin,densely dotted,black!20}
 }}
@@ -55,20 +55,44 @@
 \define@key{repere}{ymax}{\def\myymax{#1}}
 \define@key{repere}{xlabel}{\def\myxlabel{#1}}
 \define@key{repere}{ylabel}{\def\myylabel{#1}}
-\define@key{repere}{scale}{\def\myscale{#1}}
+\define@key{repere}{width}{\def\mywidth{#1}}
 \define@key{repere}{addstyle}{\def\myaddstyle{#1}}
 
-\setkeys{repere}{xmin=-10.5,ymin=-10.5,xmax=10.5,ymax=10.5,xlabel=$ x $,ylabel=$ y $,scale=0.8,addstyle={}}
+\setkeys{repere}{xmin=-10.5,ymin=-10.5,xmax=10.5,ymax=10.5,xlabel=$ x $,ylabel=$ y $,width=\textwidth,addstyle={}}
 
 \makeatother
 
 
 
-%\newenvironment{repere}[1][]{
+\newenvironment{repere}[1][]{
+	\setkeys{repere}{#1}
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		unit vector ratio*=1 1 1,
+		standardaxis2,
+		xmin=\myxmin,
+		ymin=\myymin,
+		xmax=\myxmax,
+		ymax=\myymax,
+		xlabel=\myxlabel,
+		ylabel=\myylabel,
+		\myaddstyle,
+		scale only axis,
+		width = \mywidth,]
+	}{
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+}
+
+\newcommand{\discontinuity}[2][0.1]{
+	\draw[blue,fill=white] #2 circle (#1);
+}
+
+%\newcommand{\repere}[2][]{
 %	\setkeys{repere}{#1}
-%	\begin{center}
-%		\begin{tikzpicture}
-%		\begin{axis}[
+%	\begin{axis}[
 %		unit vector ratio*=1 1 1,
 %		width = \myscale\textwidth,
 %		standardaxis2,
@@ -79,28 +103,9 @@
 %		xlabel=\myxlabel,
 %		ylabel=\myylabel,
 %		\myaddstyle]
-%	}{
-%		\end{axis}
-%		\end{tikzpicture}
-%	\end{center}
+%		#2
+%	\end{axis}
 %}
-
-\newcommand{\repere}[2][]{
-	\setkeys{repere}{#1}
-	\begin{axis}[
-		unit vector ratio*=1 1 1,
-		width = \myscale\textwidth,
-		standardaxis2,
-		xmin=\myxmin,
-		ymin=\myymin,
-		xmax=\myxmax,
-		ymax=\myymax,
-		xlabel=\myxlabel,
-		ylabel=\myylabel,
-		\myaddstyle]
-		#2
-	\end{axis}
-}
 
 %END_FOLD
 

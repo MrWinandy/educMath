@@ -36,7 +36,7 @@
 	\begin{tikzpicture}[rounded corners,thick]
 	\node (title) at (0,0) {\chaptername};
 	\draw (title.west) --++(180:\chapIndent) --++(90:\boxHeight) --++(0:\textwidth) --++(-90:\boxHeight) -- (title.east);
-	\node[anchor=west,fill=white,inner xsep=-2mm,xshift=\chapIndent,draw,yshift=\boxHeight/2] (chapternumber) at (title.east) {\fontsize{110}{132} \selectfont \thechapter};
+	\node[anchor=west,fill=white,inner xsep=0pt,xshift=\chapIndent,draw,yshift=\boxHeight/2] (chapternumber) at (title.east) {\fontsize{110}{132} \selectfont \thechapter};
 	\path let \p1 = (chapternumber.east) in
 		node[anchor=west,text width = 0.8\textwidth - \x1](label) at (chapternumber.east) {\Huge#1};
 	\end{tikzpicture}
@@ -49,7 +49,7 @@
 	\def\chapIndent{2mm}
 	\def\boxHeight{1cm}
 	\begin{tikzpicture}[rounded corners,thick]
-	\node[anchor=west,fill=white,draw,inner xsep=0mm] (chapternumber) at (0,0) {\fontsize{40}{48} \selectfont \thesection};
+	\node[anchor=west,fill=white,draw] (chapternumber) at (0,0) {\fontsize{40}{48} \selectfont \thesection};
 	\begin{pgfonlayer}{bg}    % select the background layer
 	\node[anchor=west,draw,xshift=-5mm](label) at (chapternumber.east) {\hspace*{5mm}\huge#1};
 	\end{pgfonlayer}

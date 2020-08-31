@@ -31,6 +31,8 @@
 \providecommand{\scriptcolor}{black}
 \newcommand{\highlight}[1]{{\color{\baseColor!80!black} #1}}
 
+\linespread{1.2}
+
 %BEGIN_FOLD%---------------------- Headline/Footline
 \pagestyle{scrheadings}
 \renewcommand{\chapterpagestyle}{scrheadings}

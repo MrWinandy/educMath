@@ -93,10 +93,10 @@
 		\noindent%
 		\begin{center}
 			\begin{tikzpicture}
-			\node[draw=\baseColor!80, rounded corners, inner sep=\myInnerSep,line width=\myLinewidth] (exobox)  %Border
+			\draw node[draw=\baseColor!80, rounded corners, inner sep=\myInnerSep,line width=\myLinewidth] (exobox)  %Border
 				{\begin{minipage}{\netlength}
 					\settasks{before-skip=2\baselineskip,after-skip=\baselineskip}
-					\tikzset{every picture/.style={rounded corners=0}}
+					%\tikzset{every picture/.style={rounded corners=0}}
 					 \medskip ##1
 					\end{minipage}
 				};
