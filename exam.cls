@@ -40,7 +40,7 @@
 
 \newcommand{\setSubtitle}[1]{\def\rattrapage{\\[\baselineskip] #1}}
 
-\newcommand{\scriptcolor}{black}
+\providecommand{\scriptcolor}{black}
 \setlength\parindent{0pt}
 
 
