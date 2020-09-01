@@ -2,7 +2,30 @@
 \ProvidesClass{exam}[2018/09/25 Devoir en classe]
 
 
+\def\leAuteur{Jeff Winandy}
+\date{SPECIFY DATE}
+\def\laClasse{SPECIFY CLASS}
+\def\laSaison{\empty}
+\def\init{Jeff Winandy}
+\def\logo{\empty}
+\def\caText{\empty}
+
+\RequirePackage{xkeyval}
+%\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
+\DeclareOptionX{logo}[LTL.png]{\def\logo{#1}}
+\DeclareOptionX{saison}[]{\def\laSaison{#1}}
+\DeclareOptionX{classe}[SPECIFY CLASS]{\def\laClasse{#1}}
+\DeclareOptionX{date}[SPECIFY date]{\def\date{#1}}
+\DeclareOptionX{author}[Jeff Winandy]{\def\leAuteur{#1}}
+\DeclareOptionX{ca}{\def\caText{\ca}}
+\DeclareOptionX{cna}{\def\caText{\cna}}
+\DeclareOptionX{rattrapage}{\def\rattrapage{\\[\baselineskip] Rattrapage}}
+\DeclareOptionX{supplement}{\def\rattrapage{\\[\baselineskip] Supplément}}
+\DeclareOptionX{test}{\def\titleText{\testTitle}}
+\ProcessOptionsX
+
 \LoadClass{designBase} %a4paper; landscape
+
 
 \RequirePackage{lastpage}
 %\RequirePackage{etoolbox}
@@ -10,15 +33,6 @@
 
 \def\rattrapage{}
 \def\titleText{\devoirTitle}
-
-\DeclareOption{lge}{\def\logo{LGE.png}}
-\DeclareOption{ltma}{\def\logo{LTMA.png}}
-\DeclareOption{ca}{\def\caText{\ca}}
-\DeclareOption{cna}{\def\caText{\cna}}
-\DeclareOption{rattrapage}{\def\rattrapage{\\[\baselineskip] Rattrapage}}
-\DeclareOption{supplement}{\def\rattrapage{\\[\baselineskip] Supplément}}
-\DeclareOption{test}{\def\titleText{\testTitle}}
-\ProcessOptions\relax
 
 
 \newcommand{\ca}
@@ -40,7 +54,7 @@
 
 \newcommand{\setSubtitle}[1]{\def\rattrapage{\\[\baselineskip] #1}}
 
-\providecommand{\scriptcolor}{black}
+\providecommand{\scriptcolor}{black} 
 \setlength\parindent{0pt}
 
 
@@ -111,7 +125,7 @@
 
 \lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
 \rehead{\laClasse}
-\ohead{\thedate}
+\ohead{\date}
 
 \setfootsepline{.5pt}[\color{\scriptcolor}]
 
@@ -121,7 +135,7 @@
 %\cfoot{\normalfont\small \lycee}
 %\ofoot{\small \season}
 
-\ifoot{\scshape \theauthor}
+\ifoot{\scshape \leAuteur}
 \cfoot{}
 \ofoot{
 	\ifthenelse{\equal{\logo}\empty}
