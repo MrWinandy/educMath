@@ -11,7 +11,7 @@
 \def\caText{\empty}
 
 \RequirePackage{xkeyval}
-%\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
+
 \DeclareOptionX{logo}[LTL.png]{\def\logo{#1}}
 \DeclareOptionX{saison}[]{\def\laSaison{#1}}
 \DeclareOptionX{classe}[SPECIFY CLASS]{\def\laClasse{#1}}
@@ -245,10 +245,17 @@
 
 
 
+\newcommand{\framedPoints}[2][true]{{\normalsize$\frac{\phantom{#2}}{#2}$}\ifthenelse{\boolean{#1}}{\totalQuestPoints{#2}}{}}
+
 \newcommand{\points}[1]{\marginnote{\normalsize $ \frac{\ }{#1} $} \totalQuestPoints{#1}}
 \newcommand{\doublepoints}[2]{\marginnote{\normalsize $ \frac{\ }{#1} \quad \frac{\ }{#2} $} \totalQuestPoints{#1} \totalQuestPoints{#2}}
 \newcommand{\triplepoints}[3]{\marginnote{\normalsize $ \frac{\ }{#1} \ \frac{\ }{#2} \ \frac{\ }{#3} $} \totalQuestPoints{#1} \totalQuestPoints{#2} \totalQuestPoints{#3}}
 
+\NewTasksEnvironment[item-indent=5.5em,label-width=4em,label-align=left]{questionEnum}(2)
+
+\newcommand{\oneStar}[1]{\framedPoints{#1} $ \phantom{\star\star}{\star} $\hfill \alph{task})}
+\newcommand{\twoStar}[1]{\framedPoints{#1} $ \phantom{\star}{\star\star} $\hfill \alph{task})}
+\newcommand{\threeStar}[1]{\framedPoints[false]{#1} $ {\star}{\star\star} $\hfill \alph{task})}
 
 \newcommand{\SLBase}[2]{
 	\begin{center}
