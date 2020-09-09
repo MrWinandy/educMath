@@ -257,6 +257,8 @@
 \newcommand{\twoStar}[1]{\framedPoints{#1} $ \phantom{\star}{\star\star} $\hfill \alph{task})}
 \newcommand{\threeStar}[1]{\framedPoints[false]{#1} $ {\star}{\star\star} $\hfill \alph{task})}
 
+\newcommand{\noStar}[1]{\framedPoints{#1} \hfill \alph{task})}
+
 \newcommand{\SLBase}[2]{
 	\begin{center}
 		\textbf{#1 \begin{tikzpicture}[baseline=-0.1cm]
