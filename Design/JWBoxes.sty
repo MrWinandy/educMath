@@ -106,12 +106,23 @@
 			
 }
 
+
 \JWAddNewExoStyle{exercicesEnv}{Exercice}{royalblue}{\exoBox}
 \JWAddNewExoStyle{solutionsEnv}{Solution}{royalblue}{\solBox}
 \JWAddNewExoStyle{exemplesEnv}{Exemple}{chromeyellow}{\exempleBox}
 \newcommand{\addexemple}{\exempleBox}
 \JWAddNewExoStyle{obsEnv}{Observation}{chromeyellow}{\obsBox}
 \newcommand{\addobservation}{\obsBox}
+
+
+\newcommand{\exoMark}{
+	\refstepcounter{exercicesEnv}
+	\hfill
+	\begin{tikzpicture}
+		\node [fill=royalblue!80, text=white, rounded corners, inner sep = 10pt]{Exercice \arabic{exercicesEnv}};
+	\end{tikzpicture}
+	\hfill
+}
 %END_FOLD
 
 
