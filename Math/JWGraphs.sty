@@ -86,8 +86,33 @@
 	\end{center}
 }
 
-\newcommand{\discontinuity}[2][0.1]{
-	\draw[blue,fill=white] #2 circle (#1);
+\pgfkeys{
+	/JW/fcts/.cd,
+	color/.initial = blue,
+	color/.default = blue,
+	scale/.initial = 1,
+	scale/.default = 1,
+}
+
+
+\makeatletter
+
+\define@key{fcts}{color}{\def\myColor{#1}}
+\define@key{fcts}{scale}{\def\myScale{#1}}
+
+\setkeys{fcts}{color=blue,scale=1}
+
+\makeatother
+
+\newcommand{\discontinuity}[2][]{
+	\pgfkeys{/JW/fcts/.cd,#1}
+	\edef\curColor{\pgfkeysvalueof{/JW/fcts/color}}
+	\draw[\curColor,fill=white] #2 circle (0.1*\pgfkeysvalueof{/JW/fcts/scale});
+}
+\newcommand{\continuity}[2][]{
+	\pgfkeys{/JW/fcts/.cd,#1}
+	\edef\curColor{\pgfkeysvalueof{/JW/fcts/color}}
+	\draw[\curColor,fill=\curColor] #2 circle (0.1*\pgfkeysvalueof{/JW/fcts/scale});
 }
 
 %\newcommand{\repere}[2][]{
