@@ -2,7 +2,7 @@
 \ProvidesClass{exam}[2018/09/25 Devoir en classe]
 
 
-\def\leAuteur{Jeff Winandy}
+\def\leAuteur{Joe Theis}
 \date{SPECIFY DATE}
 \def\laClasse{SPECIFY CLASS}
 \def\laSaison{\empty}
@@ -12,7 +12,7 @@
 
 \RequirePackage{xkeyval}
 %\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
-\DeclareOptionX{logo}[LTL.png]{\def\logo{#1}}
+\DeclareOptionX{logo}[LMRL.png]{\def\logo{#1}}
 \DeclareOptionX{saison}[]{\def\laSaison{#1}}
 \DeclareOptionX{classe}[SPECIFY CLASS]{\def\laClasse{#1}}
 \DeclareOptionX{date}[SPECIFY date]{\def\date{#1}}
@@ -43,6 +43,7 @@
 
 \newcommand{\testTitle}{Contrôle continu }
 \newcommand{\devoirTitle}{Devoir en classe }
+\newcommand{\examenTitle}{Examen en mathématiques }
 
 \newcommand{\classe}[1]{
 	\def\laClasse{#1}
