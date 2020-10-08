@@ -23,7 +23,7 @@
 %\DeclareOptionX{rattrapage}{\def\rattrapage{Rattrapage}}
 %\DeclareOptionX{supplement}{\def\rattrapage{Supplément}}
 \DeclareOptionX{test}{\def\titleText{\testTitle}}
-\DeclareOptionX{level}{\def\rattrapage{#1}}
+\DeclareOptionX{level}{\def\level{#1}}
 \ProcessOptionsX
 
 \LoadClass{designBase} %a4paper; landscape
@@ -33,6 +33,7 @@
 %\RequirePackage{etoolbox}
 \RequirePackage{totcount}
 
+\RequirePackage{environ}
 %\def\rattrapage{}
 \def\titleText{\devoirTitle}
 
@@ -123,7 +124,7 @@
 \lohead{\laClasse}
 %\scshape\footnotesize FISAR
 
-\chead{\ifthenelse{\equal{\rattrapage}{CB}}{Cours de base}{Cours avancé}}
+\chead{\ifthenelse{\equal{\level}{CB}}{Cours de base}{Cours avancé}}
 %\scshape\footnotesize  version \the\day.\the\month.\the\year
 
 %\lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
@@ -252,8 +253,18 @@
 \newcommand{\doublepoints}[2]{\marginnote{\normalsize $ \frac{\ }{#1} \quad \frac{\ }{#2} $} \totalQuestPoints{#1} \totalQuestPoints{#2}}
 \newcommand{\triplepoints}[3]{\marginnote{\normalsize $ \frac{\ }{#1} \ \frac{\ }{#2} \ \frac{\ }{#3} $} \totalQuestPoints{#1} \totalQuestPoints{#2} \totalQuestPoints{#3}}
 
-\NewTasksEnvironment[item-indent=5.5em,label-width=4em,label-align=left]{questionEnum}(2)
+\NewTasksEnvironment[item-indent=5.5em,label-width=4em,label-align=left]{questionEnumPrivate}(2)
+\NewEnviron{questionEnum}[1][2]{
+		\def\temp##1##2{\begin{questionEnumPrivate}(##1) ##2\end{questionEnumPrivate}} 
+		\expandaftercmds{\temp#1}{\BODY}
+		
+}
 
+
+
+\newcommand{\oneStarQ}[2]{\xifstrequal{\equal{\level}{CB}}{\noexpand\task[\noexpand\oneStar{#1}] #2}{oh no}}
+\newcommand{\twoStarQ}[2]{\noexpand\task[\twoStar{#1}] #2}
+\newcommand{\threeStarQ}[2]{\ifthenelse{\equal{\level}{CA}}{\noexpand\task[\threeStar{#1}] #2}{}}
 
 \newcommand{\oneStar}[1]{\framedPoints{#1} $ \phantom{\star\star}{\star} $\hfill \alph{task})}
 \newcommand{\twoStar}[1]{\framedPoints{#1} $ \phantom{\star}{\star\star} $\hfill \alph{task})}
