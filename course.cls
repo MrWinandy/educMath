@@ -2,7 +2,7 @@
 \ProvidesClass{course}[2018/09/25 Cours]
 
 
-\def\leAuteur{Jeff Winandy}
+\def\leAuteur{}
 \date{SPECIFY DATE}
 \def\laClasse{SPECIFY CLASS}
 \def\laSaison{\empty}
