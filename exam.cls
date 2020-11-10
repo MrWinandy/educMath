@@ -12,7 +12,7 @@
 
 \RequirePackage{xkeyval}
 %\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
-\DeclareOptionX{logo}[LMRL.png]{\def\logo{#1}}
+\DeclareOptionX{logo}[LTC.png]{\def\logo{#1}}
 \DeclareOptionX{saison}[]{\def\laSaison{#1}}
 \DeclareOptionX{classe}[SPECIFY CLASS]{\def\laClasse{#1}}
 \DeclareOptionX{date}[SPECIFY date]{\def\date{#1}}
@@ -42,7 +42,7 @@
 {\begin{center}\emph{L'usage de la calculatrice n'est pas permis!}\end{center}}
 
 \newcommand{\testTitle}{Contrôle continu }
-\newcommand{\devoirTitle}{Devoir en classe }
+\newcommand{\devoirTitle}{Devoir en mathématiques }
 \newcommand{\examenTitle}{Examen en mathématiques }
 
 \newcommand{\classe}[1]{

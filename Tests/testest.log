@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.31)  1 SEP 2020 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.31)  18 OCT 2020 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -899,6 +899,11 @@ Package xtemplate Info: Declaring object type 'tasks' taking 3 argument(s) on
 (xtemplate)             line 443.
 
  (d:/texlive/texlive/2020/texmf-dist/tex/latex/tasks/tasks.cfg))
+(d:/texlive/texlive/2020/texmf-dist/tex/latex/tabto-ltx/tabto.sty
+Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
+\CurrentLineWidth=\dimen193
+\TabPrevPos=\dimen194
+)
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
 
@@ -965,8 +970,8 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks39
-\pgfutil@tempdima=\dimen193
-\pgfutil@tempdimb=\dimen194
+\pgfutil@tempdima=\dimen195
+\pgfutil@tempdimb=\dimen196
 
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
@@ -993,16 +998,16 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 ode.tex
 \pgfkeys@tmptoks=\toks42
 ))
-\pgf@x=\dimen195
-\pgf@y=\dimen196
-\pgf@xa=\dimen197
-\pgf@ya=\dimen198
-\pgf@xb=\dimen199
-\pgf@yb=\dimen256
-\pgf@xc=\dimen257
-\pgf@yc=\dimen258
-\pgf@xd=\dimen259
-\pgf@yd=\dimen260
+\pgf@x=\dimen197
+\pgf@y=\dimen198
+\pgf@xa=\dimen199
+\pgf@ya=\dimen256
+\pgf@xb=\dimen257
+\pgf@yb=\dimen258
+\pgf@xc=\dimen259
+\pgf@yc=\dimen260
+\pgf@xd=\dimen261
+\pgf@yd=\dimen262
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
 \c@pgf@counta=\count316
@@ -1043,7 +1048,7 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen261
+\pgfmath@dimen=\dimen263
 \pgfmath@count=\count323
 \pgfmath@box=\box106
 \pgfmath@toks=\toks46
@@ -1074,32 +1079,32 @@ erarithmetics.code.tex)))
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen262
-\pgf@picmaxx=\dimen263
-\pgf@picminy=\dimen264
-\pgf@picmaxy=\dimen265
-\pgf@pathminx=\dimen266
-\pgf@pathmaxx=\dimen267
-\pgf@pathminy=\dimen268
-\pgf@pathmaxy=\dimen269
-\pgf@xx=\dimen270
-\pgf@xy=\dimen271
-\pgf@yx=\dimen272
-\pgf@yy=\dimen273
-\pgf@zx=\dimen274
-\pgf@zy=\dimen275
+\pgf@picminx=\dimen264
+\pgf@picmaxx=\dimen265
+\pgf@picminy=\dimen266
+\pgf@picmaxy=\dimen267
+\pgf@pathminx=\dimen268
+\pgf@pathmaxx=\dimen269
+\pgf@pathminy=\dimen270
+\pgf@pathmaxy=\dimen271
+\pgf@xx=\dimen272
+\pgf@xy=\dimen273
+\pgf@yx=\dimen274
+\pgf@yy=\dimen275
+\pgf@zx=\dimen276
+\pgf@zy=\dimen277
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen276
-\pgf@path@lasty=\dimen277
+\pgf@path@lastx=\dimen278
+\pgf@path@lasty=\dimen279
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen278
-\pgf@shorten@start@additional=\dimen279
+\pgf@shorten@end@additional=\dimen280
+\pgf@shorten@start@additional=\dimen281
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
@@ -1112,14 +1117,14 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen280
+\pgflinewidth=\dimen282
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen281
-\pgf@pt@y=\dimen282
-\pgf@pt@temp=\dimen283
+\pgf@pt@x=\dimen283
+\pgf@pt@y=\dimen284
+\pgf@pt@temp=\dimen285
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -1136,12 +1141,12 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen284
+\pgfarrowsep=\dimen286
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen285
+\pgf@max=\dimen287
 \pgf@sys@shading@range@num=\count326
 \pgf@shadingcount=\count327
 )
@@ -1182,8 +1187,8 @@ File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen286
-\pgf@nodesepend=\dimen287
+\pgf@nodesepstart=\dimen288
+\pgf@nodesepend=\dimen289
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -1198,8 +1203,8 @@ Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen288
-\pgffor@skip=\dimen289
+\pgffor@iter=\dimen290
+\pgffor@skip=\dimen291
 \pgffor@stack=\toks49
 \pgffor@toks=\toks50
 ))
@@ -1211,16 +1216,16 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@plot@mark@count=\count328
-\pgfplotmarksize=\dimen290
+\pgfplotmarksize=\dimen292
 )
-\tikz@lastx=\dimen291
-\tikz@lasty=\dimen292
-\tikz@lastxsaved=\dimen293
-\tikz@lastysaved=\dimen294
-\tikz@lastmovetox=\dimen295
-\tikz@lastmovetoy=\dimen296
-\tikzleveldistance=\dimen297
-\tikzsiblingdistance=\dimen298
+\tikz@lastx=\dimen293
+\tikz@lasty=\dimen294
+\tikz@lastxsaved=\dimen295
+\tikz@lastysaved=\dimen296
+\tikz@lastmovetox=\dimen297
+\tikz@lastmovetoy=\dimen298
+\tikzleveldistance=\dimen299
+\tikzsiblingdistance=\dimen300
 \tikz@figbox=\box112
 \tikz@figbox@bg=\box113
 \tikz@tempbox=\box114
@@ -1308,15 +1313,15 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen299
+\arrowsize=\dimen301
 ))
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowinset=\dimen300
-\pgfarrowlength=\dimen301
-\pgfarrowwidth=\dimen302
-\pgfarrowlinewidth=\dimen303
+\pgfarrowinset=\dimen302
+\pgfarrowlength=\dimen303
+\pgfarrowwidth=\dimen304
+\pgfarrowlinewidth=\dimen305
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarybabel.code.tex
@@ -1330,14 +1335,14 @@ File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 s/tikzlibrarydecorations.code.tex
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen304
-\pgfdecoratedremainingdistance=\dimen305
-\pgfdecoratedinputsegmentcompleteddistance=\dimen306
-\pgfdecoratedinputsegmentremainingdistance=\dimen307
-\pgf@decorate@distancetomove=\dimen308
+\pgfdecoratedcompleteddistance=\dimen306
+\pgfdecoratedremainingdistance=\dimen307
+\pgfdecoratedinputsegmentcompleteddistance=\dimen308
+\pgfdecoratedinputsegmentremainingdistance=\dimen309
+\pgf@decorate@distancetomove=\dimen310
 \pgf@decorate@repeatstate=\count342
-\pgfdecorationsegmentamplitude=\dimen309
-\pgfdecorationsegmentlength=\dimen310
+\pgfdecorationsegmentamplitude=\dimen311
+\pgfdecorationsegmentlength=\dimen312
 )
 \tikz@lib@dec@box=\box121
 )
@@ -1493,25 +1498,25 @@ Package: fp-upn 1996/10/21
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/fp/fp-eval.sty
 Package: fp-eval 1995/04/03
 ))
-\tkzRadius=\dimen311
-\tkzLength=\dimen312
-\tkz@radi=\dimen313
-\tkz@ax=\dimen314
-\tkz@ay=\dimen315
-\tkz@bx=\dimen316
-\tkz@by=\dimen317
-\tkz@cx=\dimen318
-\tkz@cy=\dimen319
-\tkz@dx=\dimen320
-\tkz@dy=\dimen321
-\tkz@tax=\dimen322
-\tkz@tay=\dimen323
-\tkz@tbx=\dimen324
-\tkz@tby=\dimen325
-\tkz@tcx=\dimen326
-\tkz@tcy=\dimen327
-\tkz@tdx=\dimen328
-\tkz@tdy=\dimen329
+\tkzRadius=\dimen313
+\tkzLength=\dimen314
+\tkz@radi=\dimen315
+\tkz@ax=\dimen316
+\tkz@ay=\dimen317
+\tkz@bx=\dimen318
+\tkz@by=\dimen319
+\tkz@cx=\dimen320
+\tkz@cy=\dimen321
+\tkz@dx=\dimen322
+\tkz@dy=\dimen323
+\tkz@tax=\dimen324
+\tkz@tay=\dimen325
+\tkz@tbx=\dimen326
+\tkz@tby=\dimen327
+\tkz@tcx=\dimen328
+\tkz@tcy=\dimen329
+\tkz@tdx=\dimen330
+\tkz@tdy=\dimen331
 \tkz@cntmk=\count365
 
 Local configuration file tkz-base.cfg found and used
@@ -1559,8 +1564,8 @@ ns.tex
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-angles.tex
 2020/03/18 3.06c tkz-tool-eu-angles.tex
-\tkz@arcsize=\dimen330
-\tkz@fillsize=\dimen331
+\tkz@arcsize=\dimen332
+\tkz@fillsize=\dimen333
 ) (d:/texlive/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-arcs.tex
 2020/03/23 3.06c tkz-obj-eu-arcs.tex
 )
@@ -1621,17 +1626,46 @@ x
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-triangles.
 tex
 2020/03/18 3.06c tkz-obj-eu-triangles.tex
-)) (d:/texlive/texlive/2020/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+)) (d:/texlive/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2020/07/31 version 4.31 text color boxes
+
+(d:/texlive/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks54
+\verbatim@line=\toks55
+\verbatim@in@stream=\read4
+)
+(d:/texlive/texlive/2020/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(d:/texlive/texlive/2020/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box124
+\tcb@upperbox=\box125
+\tcb@lowerbox=\box126
+\tcb@phantombox=\box127
+\c@tcbbreakpart=\count366
+\c@tcblayer=\count367
+\c@tcolorbox@number=\count368
+\tcb@temp=\box128
+\tcb@temp=\box129
+\tcb@temp=\box130
+\tcb@temp=\box131
+\tcb@out=\write4
+\tcb@record@out=\write5
+)
+(d:/texlive/texlive/2020/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks54
-\t@pgfplots@tokb=\toks55
-\t@pgfplots@tokc=\toks56
-\pgfplots@tmpa=\dimen332
-\c@pgfplots@coordindex=\count366
-\c@pgfplots@scanlineindex=\count367
+\t@pgfplots@toka=\toks56
+\t@pgfplots@tokb=\toks57
+\t@pgfplots@tokc=\toks58
+\pgfplots@tmpa=\dimen334
+\c@pgfplots@coordindex=\count369
+\c@pgfplots@scanlineindex=\count370
 
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
 .code.tex))
@@ -1647,14 +1681,14 @@ liststructure.code.tex)
 liststructureext.code.tex)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 array.code.tex
-\c@pgfplotsarray@tmp=\count368
+\c@pgfplotsarray@tmp=\count371
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 matrix.code.tex)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 shared.code.tex
-\c@pgfplotstable@counta=\count369
-\t@pgfplotstable@a=\toks57
+\c@pgfplotstable@counta=\count372
+\t@pgfplotstable@a=\toks59
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 deque.code.tex)
@@ -1666,7 +1700,7 @@ ta.code.tex))
 .code.tex)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
 s.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count370
+\c@pgfplotslibrarysurf@no=\count373
 
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
 .surfshading.pgfsys-pdftex.def)))
@@ -1694,13 +1728,13 @@ tex)
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
 x)
-\pgfplots@numplots=\count371
-\pgfplots@xmin@reg=\dimen333
-\pgfplots@xmax@reg=\dimen334
-\pgfplots@ymin@reg=\dimen335
-\pgfplots@ymax@reg=\dimen336
-\pgfplots@zmin@reg=\dimen337
-\pgfplots@zmax@reg=\dimen338
+\pgfplots@numplots=\count374
+\pgfplots@xmin@reg=\dimen335
+\pgfplots@xmax@reg=\dimen336
+\pgfplots@ymin@reg=\dimen337
+\pgfplots@ymax@reg=\dimen338
+\pgfplots@zmin@reg=\dimen339
+\pgfplots@zmax@reg=\dimen340
 ))
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
 ts.external.code.tex
@@ -1726,15 +1760,15 @@ File: tikzlibraryfit.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/systeme/systeme.sty
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count372
-\decimalpart=\count373
+\integerpart=\count375
+\decimalpart=\count376
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/generic/systeme/systeme.tex
-\SYS_systemecode=\toks58
-\SYS_systempreamble=\toks59
-\SYSeqnum=\count374
+\SYS_systemecode=\toks60
+\SYS_systempreamble=\toks61
+\SYSeqnum=\count377
 )
 Package: systeme 2020/05/03 v0.34 Mise en forme de systemes d'equations (CT)
 )
@@ -1747,44 +1781,44 @@ Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
 )
-\l__siunitx_tmp_box=\box124
-\l__siunitx_tmp_dim=\dimen339
-\l__siunitx_tmp_int=\count375
-\l__siunitx_number_mantissa_length_int=\count376
-\l__siunitx_number_uncert_length_int=\count377
-\l__siunitx_round_int=\count378
-\l__siunitx_process_decimal_int=\count379
-\l__siunitx_process_uncertainty_int=\count380
-\l__siunitx_process_fixed_int=\count381
-\l__siunitx_process_integer_min_int=\count382
-\l__siunitx_process_precision_int=\count383
-\l__siunitx_group_min_int=\count384
-\l__siunitx_angle_marker_box=\box125
-\l__siunitx_angle_unit_box=\box126
-\l__siunitx_angle_marker_dim=\dimen340
-\l__siunitx_angle_unit_dim=\dimen341
-\l__siunitx_unit_int=\count385
-\l__siunitx_unit_denominator_int=\count386
-\l__siunitx_unit_numerator_int=\count387
-\l__siunitx_unit_prefix_int=\count388
-\l__siunitx_unit_prefix_base_int=\count389
-\l__siunitx_unit_prefix_gram_int=\count390
-\l__siunitx_number_product_int=\count391
+\l__siunitx_tmp_box=\box132
+\l__siunitx_tmp_dim=\dimen341
+\l__siunitx_tmp_int=\count378
+\l__siunitx_number_mantissa_length_int=\count379
+\l__siunitx_number_uncert_length_int=\count380
+\l__siunitx_round_int=\count381
+\l__siunitx_process_decimal_int=\count382
+\l__siunitx_process_uncertainty_int=\count383
+\l__siunitx_process_fixed_int=\count384
+\l__siunitx_process_integer_min_int=\count385
+\l__siunitx_process_precision_int=\count386
+\l__siunitx_group_min_int=\count387
+\l__siunitx_angle_marker_box=\box133
+\l__siunitx_angle_unit_box=\box134
+\l__siunitx_angle_marker_dim=\dimen342
+\l__siunitx_angle_unit_dim=\dimen343
+\l__siunitx_unit_int=\count388
+\l__siunitx_unit_denominator_int=\count389
+\l__siunitx_unit_numerator_int=\count390
+\l__siunitx_unit_prefix_int=\count391
+\l__siunitx_unit_prefix_base_int=\count392
+\l__siunitx_unit_prefix_gram_int=\count393
+\l__siunitx_number_product_int=\count394
 \c__siunitx_one_fill_skip=\skip264
 \l__siunitx_table_unit_align_skip=\skip265
-\l__siunitx_table_exponent_dim=\dimen342
-\l__siunitx_table_integer_dim=\dimen343
-\l__siunitx_table_mantissa_dim=\dimen344
-\l__siunitx_table_marker_dim=\dimen345
-\l__siunitx_table_result_dim=\dimen346
-\l__siunitx_table_uncert_dim=\dimen347
-\l__siunitx_table_fill_pre_dim=\dimen348
-\l__siunitx_table_fill_post_dim=\dimen349
-\l__siunitx_table_fill_mid_dim=\dimen350
-\l__siunitx_table_pre_box=\box127
-\l__siunitx_table_post_box=\box128
-\l__siunitx_table_mantissa_box=\box129
-\l__siunitx_table_result_box=\box130
+\l__siunitx_table_exponent_dim=\dimen344
+\l__siunitx_table_integer_dim=\dimen345
+\l__siunitx_table_mantissa_dim=\dimen346
+\l__siunitx_table_marker_dim=\dimen347
+\l__siunitx_table_result_dim=\dimen348
+\l__siunitx_table_uncert_dim=\dimen349
+\l__siunitx_table_fill_pre_dim=\dimen350
+\l__siunitx_table_fill_post_dim=\dimen351
+\l__siunitx_table_fill_mid_dim=\dimen352
+\l__siunitx_table_pre_box=\box135
+\l__siunitx_table_post_box=\box136
+\l__siunitx_table_mantissa_box=\box137
+\l__siunitx_table_result_box=\box138
 \l__siunitx_table_number_align_skip=\skip266
 \l__siunitx_table_text_align_skip=\skip267
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/translator/translator.sty
@@ -1795,15 +1829,15 @@ Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
 
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count392
-\calc@Bcount=\count393
-\calc@Adimen=\dimen351
-\calc@Bdimen=\dimen352
+\calc@Acount=\count395
+\calc@Bcount=\count396
+\calc@Adimen=\dimen353
+\calc@Bdimen=\dimen354
 \calc@Askip=\skip268
 \calc@Bskip=\skip269
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count394
+\calc@Ccount=\count397
 \calc@Cskip=\skip270
 )
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -1813,44 +1847,44 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count395
-\l_MT_multwidth_dim=\dimen353
+\g_MT_multlinerow_int=\count398
+\l_MT_multwidth_dim=\dimen355
 \origjot=\skip271
-\l_MT_shortvdotswithinadjustabove_dim=\dimen354
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen355
-\l_MT_above_intertext_sep=\dimen356
-\l_MT_below_intertext_sep=\dimen357
-\l_MT_above_shortintertext_sep=\dimen358
-\l_MT_below_shortintertext_sep=\dimen359
-\xmathstrut@box=\box131
-\xmathstrut@dim=\dimen360
+\l_MT_shortvdotswithinadjustabove_dim=\dimen356
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen357
+\l_MT_above_intertext_sep=\dimen358
+\l_MT_below_intertext_sep=\dimen359
+\l_MT_above_shortintertext_sep=\dimen360
+\l_MT_below_shortintertext_sep=\dimen361
+\xmathstrut@box=\box139
+\xmathstrut@dim=\dimen362
 )
 (c:/Users/Joe Theis/texmf/tex/latex/Utils/JWColors.sty
 Package: JWColors 
 )
 (c:/Users/Joe Theis/texmf/tex/latex/Design/JWBoxes.sty
 Package: JWBoxes 
-\c@definitionEnv=\count396
-\c@stationEnv=\count397
-\c@activityEnv=\count398
-\c@propEnv=\count399
-\c@rappelEnv=\count400
-\c@algoEnv=\count401
-\c@retenirEnv=\count402
+\c@definitionEnv=\count399
+\c@stationEnv=\count400
+\c@activityEnv=\count401
+\c@propEnv=\count402
+\c@rappelEnv=\count403
+\c@algoEnv=\count404
+\c@retenirEnv=\count405
 \netlength=\skip272
-\c@exercicesEnv=\count403
-\c@solutionsEnv=\count404
-\c@exemplesEnv=\count405
-\c@obsEnv=\count406
+\c@exercicesEnv=\count406
+\c@solutionsEnv=\count407
+\c@exemplesEnv=\count408
+\c@obsEnv=\count409
 )
 (c:/Users/Joe Theis/texmf/tex/latex/Design/JWExercices.sty
 Package: JWExercices 
-\c@exo=\count407
+\c@exo=\count410
 )
 (c:/Users/Joe Theis/texmf/tex/latex/Design/JWFormats.sty
 Package: JWFormats 
-\pgf@layerbox@bg=\box132
-\pgf@layerboxsaved@bg=\box133
+\pgf@layerbox@bg=\box140
+\pgf@layerboxsaved@bg=\box141
 )
 (c:/Users/Joe Theis/texmf/tex/latex/Design/JWLists.sty
 Package: JWLists 
@@ -1902,9 +1936,9 @@ LaTeX Warning: You have requested package `JWGraphs',
 
 Package: /JWGraphs 
 ) (c:/Users/Joe Theis/texmf/tex/latex/Math/JWFractions.sty
-\c@tmpcounter=\count408
+\c@tmpcounter=\count411
 )
-\c@itemcounter=\count409
+\c@itemcounter=\count412
 ) (./testest.aux)
 \openout1 = `testest.aux'.
 
@@ -1936,17 +1970,17 @@ LaTeX Info: Redefining \up on input line 5.
 
 (d:/texlive/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count410
-\scratchdimen=\dimen361
-\scratchbox=\box134
-\nofMPsegments=\count411
-\nofMParguments=\count412
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count413
-\MPscratchDim=\dimen362
-\MPnumerator=\count414
-\makeMPintoPDFobject=\count415
-\everyMPtoPDFconversion=\toks61
+\scratchcounter=\count413
+\scratchdimen=\dimen363
+\scratchbox=\box142
+\nofMPsegments=\count414
+\nofMParguments=\count415
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count416
+\MPscratchDim=\dimen364
+\MPnumerator=\count417
+\makeMPintoPDFobject=\count418
+\everyMPtoPDFconversion=\toks63
 ) (d:/texlive/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1956,7 +1990,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box135
+\AtBeginShipoutBox=\box143
 Package hyperref Info: Link coloring OFF on input line 5.
 
 (d:/texlive/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1969,14 +2003,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count416
+\c@section@level=\count419
 )
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
  (./testest.out) (./testest.out)
-\@outlinefile=\write4
-\openout4 = `testest.out'.
+\@outlinefile=\write6
+\openout6 = `testest.out'.
 
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
@@ -1995,7 +2029,7 @@ File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input lin
 e 168.
-\BKM@id=\count417
+\BKM@id=\count420
 ))
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 5.
@@ -2079,7 +2113,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 9.
+(Font)              <12> on input line 9.
  [1{d:/texlive/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
@@ -2092,27 +2126,26 @@ Package rerunfilecheck Info: File `testest.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47794 strings out of 480893
- 1140431 string characters out of 5908060
- 1786874 words of memory out of 5000000
- 62332 multiletter control sequences out of 15000+600000
- 577518 words of font info for 75 fonts, out of 8000000 for 9000
+ 49530 strings out of 480893
+ 1184912 string characters out of 5908060
+ 1829942 words of memory out of 5000000
+ 64053 multiletter control sequences out of 15000+600000
+ 577557 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,19n,131p,10604b,2225s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/texlive/
-texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{d:/texlive/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/texlive/2020/texmf-d
-ist/fonts/enc/dvips/lm/lm-rm.enc}<d:/texlive/texlive/2020/texmf-dist/fonts/type
+texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/texlive/20
+20/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/texlive/2020/texmf-dist/
+fonts/enc/dvips/lm/lm-mathsy.enc}<d:/texlive/texlive/2020/texmf-dist/fonts/type
 1/public/lm/lmcsco10.pfb><d:/texlive/texlive/2020/texmf-dist/fonts/type1/public
 /lm/lmmi10.pfb><d:/texlive/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.
-pfb><d:/texlive/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb><d:/texl
-ive/texlive/2020/texmf-dist/fonts/type1/public/lm/lmro10.pfb><d:/texlive/texliv
-e/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/texlive/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmsy6.pfb>
-Output written on testest.pdf (1 page, 111430 bytes).
+pfb><d:/texlive/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/tex
+live/texlive/2020/texmf-dist/fonts/type1/public/lm/lmro10.pfb><d:/texlive/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on testest.pdf (1 page, 100859 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 72 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
