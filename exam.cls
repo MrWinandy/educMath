@@ -9,6 +9,7 @@
 \def\init{Jeff Winandy}
 \def\logo{\empty}
 \def\caText{\empty}
+\def\rattrapage{\empty}
 
 \RequirePackage{xkeyval}
 %\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
@@ -19,9 +20,10 @@
 \DeclareOptionX{author}[Jeff Winandy]{\def\leAuteur{#1}}
 \DeclareOptionX{ca}{\def\caText{\ca}}
 \DeclareOptionX{cna}{\def\caText{\cna}}
-\DeclareOptionX{rattrapage}{\def\rattrapage{\\[\baselineskip] Rattrapage}}
-\DeclareOptionX{supplement}{\def\rattrapage{\\[\baselineskip] Supplément}}
+%\DeclareOptionX{rattrapage}{\def\rattrapage{Rattrapage}}
+%\DeclareOptionX{supplement}{\def\rattrapage{Supplément}}
 \DeclareOptionX{test}{\def\titleText{\testTitle}}
+\DeclareOptionX{level}{\def\rattrapage{#1}}
 \ProcessOptionsX
 
 \LoadClass{designBase} %a4paper; landscape
@@ -31,7 +33,7 @@
 %\RequirePackage{etoolbox}
 \RequirePackage{totcount}
 
-\def\rattrapage{}
+%\def\rattrapage{}
 \def\titleText{\devoirTitle}
 
 
@@ -53,7 +55,7 @@
 	\def\laSaison{#1}
 }
 
-\newcommand{\setSubtitle}[1]{\def\rattrapage{\\[\baselineskip] #1}}
+\newcommand{\setSubtitle}[1]{\def\rattrapage{#1}}
 
 \providecommand{\scriptcolor}{black} 
 \setlength\parindent{0pt}
@@ -121,10 +123,10 @@
 \lohead{\laClasse}
 %\scshape\footnotesize FISAR
 
-\chead{Nom: \underline{\hspace{6cm}}}
+\chead{\ifthenelse{\equal{\rattrapage}{CB}}{Cours de base}{Cours avancé}}
 %\scshape\footnotesize  version \the\day.\the\month.\the\year
 
-\lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
+%\lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
 \rehead{\laClasse}
 \ohead{\date}
 
@@ -155,7 +157,7 @@
 	\vspace{0.5cm}
 	\begin{minipage}{0.75\textwidth}
 		\begin{center}
-			{\Huge \titleText \RNum{#2}.#3 \rattrapage}
+			{{\Huge \titleText \RNum{#2}.#3} \\[\baselineskip] Nom: \underline{\hspace{6cm}}}
 		\end{center}
 	\end{minipage}\hfill%
 	\begin{minipage}{0.23\textwidth}
@@ -244,12 +246,20 @@
 }
 
 
-
+\newcommand{\framedPoints}[2][true]{{\normalsize$\frac{\phantom{#2}}{#2}$}\ifthenelse{\boolean{#1}}{\totalQuestPoints{#2}}{}}
 
 \newcommand{\points}[1]{\marginnote{\normalsize $ \frac{\ }{#1} $} \totalQuestPoints{#1}}
 \newcommand{\doublepoints}[2]{\marginnote{\normalsize $ \frac{\ }{#1} \quad \frac{\ }{#2} $} \totalQuestPoints{#1} \totalQuestPoints{#2}}
 \newcommand{\triplepoints}[3]{\marginnote{\normalsize $ \frac{\ }{#1} \ \frac{\ }{#2} \ \frac{\ }{#3} $} \totalQuestPoints{#1} \totalQuestPoints{#2} \totalQuestPoints{#3}}
 
+\NewTasksEnvironment[item-indent=5.5em,label-width=4em,label-align=left]{questionEnum}(2)
+
+
+\newcommand{\oneStar}[1]{\framedPoints{#1} $ \phantom{\star\star}{\star} $\hfill \alph{task})}
+\newcommand{\twoStar}[1]{\framedPoints{#1} $ \phantom{\star}{\star\star} $\hfill \alph{task})}
+\newcommand{\threeStar}[1]{\framedPoints{#1} $ {\star}{\star\star} $\hfill \alph{task})}
+
+\newcommand{\noStar}[1]{\framedPoints{#1} \hfill \alph{task})}
 
 \newcommand{\SLBase}[2]{
 	\begin{center}
