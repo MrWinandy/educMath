@@ -123,7 +123,7 @@
 \lohead{\laClasse}
 %\scshape\footnotesize FISAR
 
-\chead{\ifthenelse{\equal{\rattrapage}{CB}}{Cours de base}{Cours avancé}}
+\chead{\ifthenelse{\equal{\rattrapage}{CB}}{Cours de base}{\ifthenelse{\equal{\rattrapage}{CA}}{Cours avancé}{}}}
 %\scshape\footnotesize  version \the\day.\the\month.\the\year
 
 %\lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
@@ -254,10 +254,14 @@
 
 \NewTasksEnvironment[item-indent=5.5em,label-width=4em,label-align=left]{questionEnum}(2)
 
+\newcommand{\addTwoStar}[1]{$ \star\star $\totalQuestPoints{#1}}
+\newcommand{\addThreeStar}[1]{$ \star\star\star $\totalQuestPoints{#1}}
+\newcommand{\addOneStar}[1]{$ \star $\totalQuestPoints{#1}}
 
 \newcommand{\oneStar}[1]{\framedPoints{#1} $ \phantom{\star\star}{\star} $\hfill \alph{task})}
 \newcommand{\twoStar}[1]{\framedPoints{#1} $ \phantom{\star}{\star\star} $\hfill \alph{task})}
 \newcommand{\threeStar}[1]{\framedPoints{#1} $ {\star}{\star\star} $\hfill \alph{task})}
+\newcommand{\bonus}[1]{\framedPoints[false]{#1} \hfill $ \circledast $}
 
 \newcommand{\noStar}[1]{\framedPoints{#1} \hfill \alph{task})}
 
