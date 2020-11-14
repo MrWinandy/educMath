@@ -266,7 +266,11 @@
 	width/.default = 3.5cm,
 	intervals/.initial = {},
 	subticks/.initial = 0,
-	subticks/.default = 0
+	subticks/.default = 0,
+	extra numbers/.initial = \empty,
+	extra numbers/.default = \empty,
+	unit/.initial = false,
+	unit/.default = false
 }
 
 \newcommand{\graduatedAxis}[3][]{
@@ -292,6 +296,10 @@
 			\draw (\x,-0.1) -- (\x,0.1);
 			\ifthenelse{\boolean{\pgfkeysvalueof{/JW/gA/no numbers}}}{\node at (\x,-0.4) {$ \phantom{\x} $};}{\node at (\x,-0.4) {$ \pgfmathprintnumber{\x} $};}
 		}
+		\ifthenelse{\boolean{\pgfkeysvalueof{/JW/gA/unit}}}
+		{\foreach \x in {0,1} {
+			\node at (\x,-0.4) {$ \pgfmathprintnumber{\x} $};
+		}}{}
 		\pgfkeysvalueof{/JW/gA/intervals}
 	\end{tikzpicture}
 }
