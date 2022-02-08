@@ -90,6 +90,11 @@
 	\printExoMark
 }
 
+\newcommand{\addexoNoMark}[2]{
+	\addexoInternal{#1}{#2}
+	\stepcounter{solutionsEnv} 
+}
+
 %END_FOLD
 
 %BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Printing exercices grouped together

@@ -10,6 +10,8 @@
 \def\logo{\empty}
 \def\caText{\empty}
 \def\rattrapage{\empty}
+%\def\rattrapage{}
+\def\titleText{\devoirTitle}
 
 \RequirePackage{xkeyval}
 %\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
@@ -33,8 +35,6 @@
 %\RequirePackage{etoolbox}
 \RequirePackage{totcount}
 
-%\def\rattrapage{}
-\def\titleText{\devoirTitle}
 
 
 \newcommand{\ca}
@@ -60,38 +60,41 @@
 \providecommand{\scriptcolor}{black} 
 \setlength\parindent{0pt}
 
+%
+%\newcommand{\compTableau}{
+%	\begin{center}
+%		\setstretch{1}\setlength{\extrarowheight}{5pt}
+%		\footnotesize
+%		\begin{tabular}{|p{4.5cm}|*{6}{>{\centering\arraybackslash}m{1.9cm}|}}
+%			\hline
+%			\textbf{Compétence} & \textbf{non évalué} & \textbf{insuffisant}  & \textbf{satisfaisant}  &  \textbf{bien} & \textbf{très bien} \\ \hline \hline
+%			\textbf{Nombres et opérations / dépendance et variation} & & & & &  \\  \hline
+%			\textbf{Figures du plan\newline et de l'espace} & &  & & &  \\  \hline
+%			%\textbf{Données} & & & & &  \\  &  & & & \\  \hline
+%			%\textbf{Processus aléatoires} &&&&\\  &  &  & & \\  \hline
+%			\textbf{Résolution de problèmes / modéliser} & & & & & \\  \hline
+%			\textbf{Argumenter / \newline communiquer} & &&&&\\  \hline
+%		\end{tabular}
+%	\end{center}
+%}
 
-\newcommand{\compTableau}{
+
+\newcommand{\compTableau}[5]{
 	\begin{center}
 		\setstretch{1}\setlength{\extrarowheight}{5pt}
 		\footnotesize
-		\begin{tabular}{|p{4.5cm}|*{6}{>{\centering\arraybackslash}m{1.9cm}|}}
+		\begin{tabular}{|p{4.5cm}|m{1.7cm}||p{2.7cm}|m{1.7cm}|}
 			\hline
-			\textbf{Compétence} & \textbf{non évalué} & \textbf{insuffisant}  & \textbf{satisfaisant}  &  \textbf{bien} & \textbf{très bien} \\ \hline \hline
-			\textbf{Nombres et opérations / dépendance et variation} & & & & &  \\  \hline
-			\textbf{Figures du plan\newline et de l'espace} & &  & & &  \\  \hline
-			%\textbf{Données} & & & & &  \\  &  & & & \\  \hline
-			%\textbf{Processus aléatoires} &&&&\\  &  &  & & \\  \hline
-			\textbf{Résolution de problèmes / modéliser} & & & & & \\  \hline
-			\textbf{Argumenter / \newline communiquer} & &&&&\\  \hline
-		\end{tabular}
-	\end{center}
-}
-
-\newcommand{\compTableauClassique}{
-	\begin{center}
-		\setstretch{1}\setlength{\extrarowheight}{5pt}
-		\footnotesize
-		\begin{tabular}{|p{4.5cm}|*{6}{>{\centering\arraybackslash}m{1.9cm}|}}
+			\textbf{Compétence} & \textbf{Évaluation} & \textbf{Compétence} & \textbf{Évaluation} \\
+			\hline \hline
+			\textbf{Nombres et opérations / dépendance et variation} & #1 & \textbf{Figures du plan\newline et de l'espace} & #2 \\
 			\hline
-			\textbf{Compétence} & \textbf{non évalué} & \textbf{insuffisant}  & \textbf{satisfaisant}  &  \textbf{bien} & \textbf{très bien} \\ \hline \hline
-			\textbf{Nombres et opérations / dépendance et variation} & & & & &  \\  \hline
-			\textbf{Figures du plan\newline et de l'espace} & &  & & &  \\  \hline
-			%\textbf{Données} & & & & &  \\  &  & & & \\  \hline
-			%\textbf{Processus aléatoires} &&&&\\  &  &  & & \\  \hline
-			\textbf{Résolution de problèmes / modéliser} & & & & & \\  \hline
-			\textbf{Argumenter / \newline communiquer} & &&&&\\  \hline
-		\end{tabular}
+			\textbf{Résolution de problèmes / modéliser} & #3 & \textbf{Argumenter /\newline communiquer} & #4 \\
+			\hline
+			\textbf{Processus aléatoires /\newline Données} & #5 &&\\
+			\hline
+		\end{tabular}\\
+	{\tiny \textbf{Niveaux} :mauvais (M) ; insuffisant (I) ; satisfaisant (S) ; bien (B) ; très bien (TB) ; non évalué (NE)}
 	\end{center}
 }
 
@@ -272,6 +275,7 @@
 			\node[circle,draw,inner sep=0.2cm, label=](p) at (0,0) {\phantom{\huge $ \frac{\Huge \  }{#2} $}};
 			\end{tikzpicture} }
 	\end{center}
+	\totalpoints{#2}
 }
 
 \newcommand{\SL}[1]{\SLBase{Soin et langage mathématique:}{#1}}

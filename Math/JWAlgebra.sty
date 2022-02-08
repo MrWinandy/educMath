@@ -71,3 +71,29 @@
 
 %END_FOLD
 
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Vecteurs
+	\newcommand{\gobblenextarg}[1]{\\ #1}
+
+	\makeatletter
+	
+	\newcommand{\vect}[3][]{
+		\ifthenelse{\equal{#1}{\empty}}{}{\overrightarrow{#1}}
+		\@ifnextchar\bgroup{\vectThreeD{#2}{#3}}{\vectTwoD{#2}{#3}}
+	}
+
+	\makeatother
+
+	\newcommand{\vectTwoD}[2]{
+		\def\arraystretch{1.3}
+		\lk \begin{array}{c}
+			#1 \\ #2
+		\end{array} \rk
+	}
+	
+	\newcommand{\vectThreeD}[3]{
+		\def\arraystretch{1.3}
+		\lk \begin{array}{c}
+			#1 \\ #2 \\ #3
+		\end{array} \rk
+	}
+%END_FOLD
