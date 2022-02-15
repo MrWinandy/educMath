@@ -10,15 +10,21 @@
 \def\logo{\empty}
 \def\caText{\empty}
 
+\newif\if@oldtheme
+
 \RequirePackage{xkeyval}
 %\define@key{course.cls}{logo}[LTL.png]{\def\logo{#1}}
 \DeclareOptionX{logo}[LTL.png]{\def\logo{#1}}
 \DeclareOptionX{saison}[]{\def\laSaison{#1}}
 \DeclareOptionX{classe}[SPECIFY CLASS]{\def\laClasse{#1}}
 \DeclareOptionX{author}[Jeff Winandy]{\def\leAuteur{#1}}
+
+\DeclareOptionX{oldTheme}{\@oldthemetrue}
 \ProcessOptionsX
 
 \LoadClass{designBase} %a4paper; landscape
+
+\if@oldtheme{\RequirePackage{JWOldTheme}}\else{}\fi
 
 \newcommand{\classe}[1]{
 	\def\laClasse{#1}

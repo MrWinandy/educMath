@@ -1,0 +1,396 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JWOldTheme}
+
+\RequirePackage[framemethod=TikZ]{mdframed}
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Styles
+\mdfdefinestyle{envBoxBase}{
+	linecolor = \baseColor!80,
+	middlelinewidth = 2pt,
+	roundcorner=5pt,
+	backgroundcolor = \baseColor!5,
+	innertopmargin=0.2cm,
+	innerbottommargin=0.2cm,
+	frametitlebelowskip=0cm,
+	frametitleaboveskip=0cm,
+	innerleftmargin=\topskip,
+	innerrightmargin=\topskip,
+	frametitlebackgroundcolor=\baseColor!80,
+	frametitlefont=\color{white}\Large\bfseries,
+	nobreak=true
+}
+
+
+\tikzset{
+	warningsymbol/.style={
+		rectangle,
+		draw=\baseColor,
+		fill=white,
+		scale=1,
+		overlay}
+}
+
+\mdfdefinestyle{algoBox}{
+	linecolor = \baseColor!80,
+	%roundcorner=5pt,
+	backgroundcolor = \baseColor!5,
+	innertopmargin=10pt,
+	innerbottommargin=10pt,
+	frametitlebelowskip=0cm,
+	frametitleaboveskip=0cm,
+	innerleftmargin=\topskip,
+	innerrightmargin=\topskip,
+	topline=false,%
+	rightline=false,%
+	bottomline=false,%
+	linewidth = 6pt,
+	frametitlebackgroundcolor=\baseColor!80,
+	frametitlefont=\color{white}\Large\bfseries,
+	nobreak=false,
+	%	singleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$) 
+	%		node[warningsymbol] {\danger};}
+}
+
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Actual boxes
+%\newcommand{\JWAddNewTheoremStyle}[5]{
+%	\mdtheorem[style=#5]{#1}{#2}
+%	\newenvironment{#4}[1][]{
+%		\def\baseColor{#3}
+%		\begin{#1}[##1]
+%			\addcontentsline{toc}{subsection}{#2 \arabic{#1}: ##1}
+%		}{\end{#1}}
+%}
+
+%\JWAddNewTheoremStyle{definitionEnv}{Définition}{indianred}{defn}{envBoxBase}
+%\JWAddNewTheoremStyle{stationEnv}{Station}{black}{station}{envBoxBase}
+%\JWAddNewTheoremStyle{activityEnv}{Activité}{chocolate}{activite}{envBoxBase}
+%\JWAddNewTheoremStyle{propEnv}{Propriété}{forestgreen}{prop}{envBoxBase}
+%\JWAddNewTheoremStyle{rappelEnv}{Rappel}{turquoise}{rappel}{envBoxBase}
+%\JWAddNewTheoremStyle{thmEnv}{Théorème}{orangered}{thm}{envBoxBase}
+%\JWAddNewTheoremStyle{checkpointenv}{Checkpoint}{forestgreen}{checkpoint}{envBoxBase}
+%
+%\JWAddNewTheoremStyle{algoEnv}{Algorithme}{blue}{algo}{algoBox}
+%\JWAddNewTheoremStyle{retenirEnv}{À retenir}{turquoise}{retenir}{algoBox}
+%\JWAddNewTheoremStyle{regleEnv}{Règle}{violet}{regle}{algoBox}
+
+
+%END_FOLD
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercices Boxes formatting
+
+%\newlength\netlength
+
+%\newcommand{\JWAddNewExoStyle}[4]{
+%	\newcounter{#1}[chapter]
+%	\newcommand{#4}[1]{
+%		\def\baseColor{#3}
+%		\refstepcounter{#1}
+%		\def\myInnerSep{10pt}
+%		\def\myLinewidth{2pt}
+%		\setlength{\netlength}{\textwidth}  % Net length is textwidth without the inner separation on both sides
+%		\addtolength{\netlength}{-\myInnerSep}
+%		\addtolength{\netlength}{-\myLinewidth}
+%		\addtolength{\netlength}{-\myInnerSep}
+%		\addtolength{\netlength}{-\myLinewidth}
+%		\noindent%
+%		\begin{center}
+%			\begin{tikzpicture}
+%			\draw node[draw=\baseColor!80, rounded corners, inner sep=\myInnerSep,line width=\myLinewidth] (exobox)  %Border
+%				{\begin{minipage}{\netlength}
+%					\settasks{before-skip=2\baselineskip,after-skip=\baselineskip}
+%					%\tikzset{every picture/.style={rounded corners=0}}
+%					 \medskip ##1
+%					\end{minipage}
+%				};
+%			\node at (exobox.north west) [xshift=\myInnerSep, anchor=west, fill=\baseColor!80, text=white, rounded corners]{#2 \arabic{#1}}; %Title
+%			\end{tikzpicture}
+%		\end{center}}
+%			
+%}
+%
+%
+%\JWAddNewExoStyle{exercicesEnv}{Exercice}{royalblue}{\exoBox}
+%\JWAddNewExoStyle{solutionsEnv}{Solution}{royalblue}{\solBox}
+%\JWAddNewExoStyle{exemplesEnv}{Exemple}{chromeyellow}{\exempleBox}
+%\newcommand{\addexemple}{\exempleBox}
+%\JWAddNewExoStyle{obsEnv}{Observation}{chromeyellow}{\obsBox}
+%\newcommand{\addobservation}{\obsBox}
+%
+%
+%\newcommand{\exoMark}{
+%	\refstepcounter{exercicesEnv}
+%	\hfill
+%	\begin{tikzpicture}
+%		\node [fill=royalblue!80, text=white, rounded corners, inner sep = 10pt]{Exercice \arabic{exercicesEnv}};
+%	\end{tikzpicture}
+%	\hfill
+%}
+%END_FOLD
+
+
+%BEGIN_FOLD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter/section formatting
+%\titlespacing{\chapter}{0cm}{0cm}{0cm}
+%\titleformat{\chapter}[display]
+%{\huge\bfseries}
+%{
+%	\chapterbox{#1}
+%}
+%{-\baselineskip}
+%{\bfseries}{\normalfont}
+%
+%\titleformat{\section}[display]
+%{\huge\bfseries}
+%{
+%	\sectionbox{#1}
+%}
+%{-\baselineskip}
+%{\bfseries}{\normalfont}
+
+%\titleformat{\subsection}[display]
+%{\huge\bfseries}
+%{
+	%	\subsectionbox{#1}
+	%}
+%{0pt}
+%{\bfseries}{\normalfont}
+
+%---------------------- table of contents komplett iwwerschafft
+\setcounter{chapter}{0}
+\newcommand*\toccolor{%
+	\ifcase\value{chapter}%
+	navy%----- 0 -- table of contents
+	\or   navy%
+	\or   darkslateblue%---- Kapitel 1
+	\or   steelblue%------ Kapitel 2
+	\or   darkgreen%------ Kapitel 3
+	\or   darkolivegreen%------ Kapitel 4
+	\or   darkgoldenrod%---- Kapitel 5
+	\or   sienna%---- Kapitel 6
+	\or   firebrick%---- Kapitel 7
+	\else navy%-- default
+	\fi}
+
+\tocloftpagestyle{scrheadings}
+
+
+
+\makeatletter
+%% Gliederungsnummer
+\renewcommand{\numberline}[1]{%
+	\makebox[.8cm][l]{#1}\hspace{1ex}}
+
+\renewcommand*\dottedtocline{\leavevmode%
+	\leaders\hbox{$\m@th
+		\mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+		mu$}\hfill\kern\z@} 
+
+
+\renewcommand{\l@chapter}[2]{%
+	\addvspace{1em}%                      vert. Abstand
+	\pagebreak[3]%                        Seitenumbruch hier erlauben
+	\noindent%                            nicht einr√ºcken
+	{\stepcounter{chapter}\color{\toccolor}\bfseries%
+		%   \Roman{chapter}%
+		%   \hspace{1ex}%
+		\rmfamily #1%
+	}%
+	\hfill%
+	{\color{\toccolor}\bfseries #2}%          Text +  Nummer
+	\par%                                 Zeilenumbruch
+	\nopagebreak%                         Seitenumbruch nicht erlauben
+	\def\scriptcolor{navy}%               Head- & Footline Faarw vum Inhaltsverzeichnis
+}
+% section
+\renewcommand{\l@section}[2]{%
+	\noindent\hspace{1cm}%                hor. Einr√ºcken (1cm)
+	\rmfamily #1\dottedtocline#2%                           Text + Nummer
+	\par%                                 Zeilenumbruch
+	\nopagebreak[2]%                      m√∂glichst kein Seitenumbruch
+}
+
+%% subsection
+\renewcommand{\l@subsection}[2]{%
+	\noindent\hspace{2cm}%                hor. Einr√ºcken (2cm)
+	\rmfamily #1\dottedtocline#2%                           Text + Nummer
+	\par%                                 Zeilenumbruch
+}
+%% subsubsection
+%\renewcommand{\l@subsubsection}[2]{%
+	%  \noindent\hspace{3cm}%                hor. Einr√ºcken (3cm)
+	%  \rmfamily #1\dottedtocline#2%                           Text + Nummer
+	%  \par%                                 Zeilenumbruch
+	%}
+\makeatother
+
+%\renewcommand*\cftchapfont{\stepcounter{chapter}\color{\toccolor}\bfseries}
+%\renewcommand*\cftchappagefont{\color{\toccolor}\bfseries}
+
+
+\newcommand{\toc}
+{\pagenumbering{roman}
+	\tableofcontents
+	\clearpage
+	\setcounter{chapter}{0}
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+}
+
+
+
+%---------------------- kleng Iwwerschreft-Format
+\newcommand{\stitle}[1]
+{\medskip
+	\noindent{\large\color{\scriptcolor}\bfseries #1}
+	\newline
+}
+
+
+
+%---------------------- grouss Iwwerschreft-Format
+%\newlength\netlength
+\newcommand{\btitle}[1]
+{\netlength=\textwidth
+	\addtolength{\netlength}{-4pt}
+	\noindent
+	\begin{tikzpicture} % right color=\scriptcolor!50, color=\scriptcolor
+		\node[right color=white, left color=\scriptcolor!10, color=\scriptcolor, rectangle, inner sep=2pt] (box)
+		{\begin{minipage}{\netlength\scshape\large}
+				#1
+			\end{minipage}
+		};
+	\end{tikzpicture}
+}
+\newcommand{\btitleinv}[1]
+{\netlength=\textwidth
+	\addtolength{\netlength}{-4pt}
+	\noindent
+	\begin{tikzpicture}
+		\node[left color=\scriptcolor!50, right color=white, color=white, rectangle, inner sep=2pt] (box)
+		{\begin{minipage}{\netlength\scshape\large}
+				#1
+			\end{minipage}
+		};
+	\end{tikzpicture}
+}
+
+
+
+%---------------------- Layout an de Rand berechnen
+\newlength{\rand}
+\setlength{\rand}{.5\paperwidth}   % En halwen huelen dat een zum Schluss
+\addtolength{\rand}{-0mm}          % BCOR-Wert!!
+\addtolength{\rand}{-.5\textwidth} % de Rand vun enger S√§it huet.
+
+
+
+%---------------------- Headline/Footline
+\setheadwidth{\textwidth}
+\setheadsepline{1pt}[\color{\scriptcolor}]
+
+\rohead{\normalfont\bfseries \ifthenelse{\equal{\chaptertitle}\empty}{\rightmark}{\chaptertitle}\ %
+	{\color{\scriptcolor}\rule[-3mm]{1pt}{7mm}}%
+	\rlap{\enskip\thepage}%
+}
+\lohead{\classe}
+%\scshape\footnotesize FISAR
+
+\chead{}
+%\scshape\footnotesize  version \the\day.\the\month.\the\year
+
+\lehead{\llap{\thepage\enskip}{\color{\scriptcolor}\rule[-2mm]{1pt}{7mm}} \normalfont\bfseries \chaptertitle}
+\rehead{\classe}
+
+\setfootsepline{.5pt}[\color{\scriptcolor}]
+
+
+\def\classe{}
+\def\lycee{}
+\def\season{2018/2019}
+\def\init{fisar}
+
+%\ifoot{\small \classe}
+%\cfoot{\normalfont\small \lycee}
+%\ofoot{\small \season}
+
+\ifoot{\scshape \init}
+\cfoot{\normalfont \lycee}
+\ofoot{{\scriptsize( v.\the\day.\the\month.)} \small\season}
+
+
+\pagestyle{scrheadings}
+\renewcommand{\chapterpagestyle}{scrheadings}
+
+
+
+%---------------------- Kapitel-Iwwerschreften
+\newlength{\chapterline}
+
+\titleformat{\chapter}
+[block] % shape
+{% format
+	\LARGE\scshape\color{\toccolor}
+}
+{% label
+	\hspace{2cm}\thechapter
+}
+{% sep
+	1em}
+{% before-code
+}
+[% after-code
+\vspace{-\baselineskip}%
+\hspace{-\rand}%
+\setlength{\chapterline}{\titlewidth}%
+\addtolength{\chapterline}{\rand}%
+\raisebox{-0.1cm}
+{\begin{tikzpicture}[x=1cm, y=1cm]
+		\shade[left color = \scriptcolor] (0,0) rectangle (\chapterline,0.05);
+	\end{tikzpicture}
+}
+]
+
+\def\chaptertitle{}
+
+\let\oldchap=\chapter
+\renewcommand*{\chapter}
+{%
+	\clearpage\def\scriptcolor{\toccolor}%
+	\secdef{\Chap}{\ChapS}%
+}
+\newcommand\ChapS[1]
+{\begin{singlespace}
+		\oldchap*{#1}
+		\begin{doublespace}
+			\def\chaptertitle{#1}
+		\end{doublespace}
+	\end{singlespace}
+}
+\newcommand\Chap[2][]
+{\begin{singlespace}
+		\oldchap[#1]{#2}
+		\begin{doublespace}
+			\def\chaptertitle{#2}
+		\end{doublespace}
+	\end{singlespace}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

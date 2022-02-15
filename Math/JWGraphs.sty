@@ -58,8 +58,9 @@
 \define@key{repere}{ylabel}{\def\myylabel{#1}}
 \define@key{repere}{width}{\def\mywidth{#1}}
 \define@key{repere}{addstyle}{\def\myaddstyle{#1}}
+\define@key{repere}{labelsize}{\def\mylabelsize{#1}}
 
-\setkeys{repere}{xmin=-10.5,ymin=-10.5,xmax=10.5,ymax=10.5,xlabel=$ x $,ylabel=$ y $,width=\textwidth,addstyle={}}
+\setkeys{repere}{xmin=-10.5,ymin=-10.5,xmax=10.5,ymax=10.5,xlabel=$ x $,ylabel=$ y $,width=\textwidth,labelsize = \normalsize,addstyle={}}
 
 \makeatother
 
@@ -78,6 +79,8 @@
 		ymax=\myymax,
 		xlabel=\myxlabel,
 		ylabel=\myylabel,
+		x tick label style = {font =\mylabelsize},
+		y tick label style = {font =\mylabelsize},
 		\myaddstyle,
 		scale only axis,
 		width = \mywidth,]
